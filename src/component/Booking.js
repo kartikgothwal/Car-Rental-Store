@@ -107,19 +107,19 @@ article {
         <>
             <GlobalStyle />
 
-            <Wrapper class="booking-section">
-                <div class="booking-header">
-                    <div class="booking-container">
-                        <h1 class="booking-heading">Book a car</h1>
-                        <div class="booking-details">
+            <Wrapper className="booking-section">
+                <div className="booking-header">
+                    <div className="booking-container">
+                        <h1 className="booking-heading">Book a car</h1>
+                        <div className="booking-details">
                             <form action="/booking" method="post" id="booking-section-form">
-                                <div class="first-row-booking">
+                                <div className="first-row-booking">
 
                                     <article>
-                                        <label for="CarSelect"><i class="fa-solid fa-car booking-icon"></i>Select a
+                                        <label htmlFor="CarSelect"><i className="fa-solid fa-car booking-icon"></i>Select a
                                             car*</label>
                                         <select name="CarSelect" id="CarSelect">
-                                            <option value="" selected disabled>Select car</option>
+                                            <option value=""  disabled>Select car</option>
                                             <option value="">Mustang GT</option>
                                             <option value="">Toyota Supra</option>
                                             <option value="">Mahindra Thar</option>
@@ -134,7 +134,7 @@ article {
                                         </select>
                                     </article>
                                     <article>
-                                        <label for="PickUpLocation"><i class="fa-solid fa-location-dot booking-icon"></i> Pick
+                                        <label htmlFor="PickUpLocation"><i className="fa-solid fa-location-dot booking-icon"></i> Pick
                                             up location*</label>
                                         <select name="PickUpLocation" id="PickUpLocation">
                                             <option value="" selected disabled>Select location</option>
@@ -146,7 +146,7 @@ article {
                                         </select>
                                     </article>
                                     <article>
-                                        <label for="DropOffLocation"><i class="fa-solid fa-location-dot booking-icon"></i> Drop
+                                        <label htmlFor="DropOffLocation"><i className="fa-solid fa-location-dot booking-icon"></i> Drop
                                             Off location*</label>
                                         <select name="DropOffLocation" id="DropOffLocation">
                                             <option value="" selected disabled>Select location</option>
@@ -158,14 +158,14 @@ article {
                                         </select>
                                     </article>
                                 </div>
-                                <div class="second-row-booking">
+                                <div className="second-row-booking">
                                     <article>
-                                        <label for="PickUpDate"><i class="fa-solid fa-calendar-days booking-icon"></i> Pick
+                                        <label htmlFor="PickUpDate"><i className="fa-solid fa-calendar-days booking-icon"></i> Pick
                                             up date*</label>
                                         <input type="date" name="PickUpDate" id="PickUpDate" />
                                     </article>
                                     <article>
-                                        <label for="DropOffDate"><i class="fa-solid fa-calendar-days booking-icon"></i> Drop
+                                        <label htmlFor="DropOffDate"><i className="fa-solid fa-calendar-days booking-icon"></i> Drop
                                             off date*</label>
                                         <input type="date" name="DropOffDate" id="DropOffDate" />
                                     </article>
