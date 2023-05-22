@@ -1,9 +1,9 @@
 import React from "react";
-import { GlobalStyle } from "./styles/GlobalStyle";
+import { GlobalStyle } from "../styles/GlobalStyle";
 import styled from "styled-components";
-import SectionImg1 from './images/Section-img/section-img-1.jpg'
-import SectionImg2 from './images/Section-img/section-img-2.jpg'
-import SectionImg3 from './images/Section-img/section-img-3.jpg'
+import SectionImg1 from '../images/Section-img/section-img-1.jpg'
+import SectionImg2 from '../images/Section-img/section-img-2.jpg'
+import SectionImg3 from '../images/Section-img/section-img-3.jpg'
 export default function Service() {
   const Wrapper = styled.section`
     .services-section {

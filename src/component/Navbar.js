@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components"
-import { GlobalStyle } from "./styles/GlobalStyle"
-import logo from './images/Logo.png'
+import styled from "styled-components";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import logo from "./images/Logo.png";
+import { NavLink} from "react-router-dom";
 
 export default function Navbar() {
   const HeaderTop = styled.header`
-  
     #navbar {
       display: flex;
       margin: 10px 35px;
@@ -52,6 +52,7 @@ export default function Navbar() {
       color: var(--black-color);
       font-family: sans-serif;
     }
+  
 
     /* Right section of the game 
   */
@@ -85,7 +86,7 @@ export default function Navbar() {
       cursor: pointer;
     }
 
-    .navbar-links li a:hover,
+    .navbar-links li a:hover,  
     #left-btn:hover {
       color: var(--btn-background-color);
     }
@@ -93,43 +94,53 @@ export default function Navbar() {
     #right-btn:hover {
       box-shadow: 0 10px 15px 0 rgba(211, 57, 26, 0.35);
     }
+    
   `;
+
+  // const navigate = useNavigate();
+  const goToLoginPage = () => {
+  //   let path = './LoginPageComponents/LoginRegistration.js';
+  //   navigate(path);
+
+  }
+
   return (
     <>
       <GlobalStyle />
       <HeaderTop id="header">
-
         <nav id="navbar">
           <div className="left-section">
-            <a href="/"><img src={logo} className="logo-img" alt="Logo" /></a>
+            <NavLink to="/">
+              <img src={logo} className="logo-img" alt="Logo" />
+            </NavLink>
           </div>
           <div className="mid-section">
             <ul className="navbar-links">
               <li>
-                <a href="1">Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a href="1">About</a>
+                <NavLink to="/about">About</NavLink>
               </li>
               <li>
-                <a href="1">Vehical Models</a>
+                <NavLink to="/vehicalsmodels">Vehical Models</NavLink>
               </li>
               <li>
-                <a href="1">Testimonial</a>
+                <NavLink to="/testimonial">Testimonial</NavLink>
               </li>
               <li>
-                <a href="1">OurTeam</a>
+                <NavLink to="/ourteam">OurTeam</NavLink>
               </li>
               <li>
-                <a href="1">Support</a>
+                <NavLink to="/support">Support</NavLink>
               </li>
             </ul>
           </div>
           <div className="right-section">
-            <button className="btn" id="left-btn">
+            <button onClick={goToLoginPage()} className="btn" id="left-btn">
               Sign In
             </button>
-            <button className="btn" id="right-btn">
+            <button onClick={goToLoginPage()} className="btn" id="right-btn">
               Register
             </button>
           </div>

@@ -1,23 +1,27 @@
- 
+
 import './App.css';
-import HomeSection from './component/HomeSection';
 import Navbar from './component/Navbar';
-import Service from './component/Service';
-import Booking from './component/Booking'
-import WhyUs from './component/WhyUs';
-import VehicalCollection from './component/VehicalCollection';
+import Home from './component/Home';
+import About from './component/About';
  
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import VehicalModels from './component/VehicalModels';
+
 
 
 function App() {
   return (
     <>
-    <Navbar/>   
-    <HomeSection/>
-    <Service/>
-    <Booking/>
-    <WhyUs/>
-    <VehicalCollection/>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path='/' element={<Home />} /> 
+          <Route exact path='/about' element={<About />} /> 
+          <Route exact path='/about' element={<About />} /> 
+          <Route exact path='/vehicalsmodels' element={<VehicalModels />} /> 
+          
+        </Routes>
+      </Router>
     </>
   );
 }

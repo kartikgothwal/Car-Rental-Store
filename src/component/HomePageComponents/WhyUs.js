@@ -1,12 +1,9 @@
 import React from 'react'
-import { GlobalStyle } from './styles/GlobalStyle'
+import { GlobalStyle } from '../styles/GlobalStyle'
 import styled from 'styled-components'
 import {AiFillCar} from 'react-icons/ai'
 import {FaPiggyBank, FaThumbsUp} from 'react-icons/fa'
  
-
-
-
 export default function WhyUs() {
     const Wrapper = styled.section`
     
