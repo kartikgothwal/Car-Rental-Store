@@ -43,6 +43,12 @@ export default function FaqsAccordian(props) {
       padding: 2rem 0;
       display: flex;
       justify-content: center;
+      background: url("../images//FAQ section Bg image/bg-image.png") center
+        center no-repeat;
+      background-position: 0 70%;
+      background-repeat: no-repeat;
+      background-size: auto;
+      /* padding: 10rem 0; */
     }
     .faq-content-div-box {
       display: flex;
@@ -55,20 +61,19 @@ export default function FaqsAccordian(props) {
       /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); */
       width: 50rem;
       width: 50rem;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
     }
     .faq-content-div-box-hero {
       display: flex;
       flex-direction: column;
       justify-content: left;
-      height: 10rem;
+      height: 11rem;
       /* align-items: center; */
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
       /* border: 2px solid; */
       transition: max-height 0.5s ease;
-
     }
     .faq-content-div-box-hero-main {
       display: flex;
@@ -76,7 +81,7 @@ export default function FaqsAccordian(props) {
       align-items: center;
       /* border: 2px solid; */
       gap: 2rem;
-      height: 4rem;
+      height: 5rem;
       padding: 8px 32px;
       cursor: pointer;
     }
@@ -90,23 +95,22 @@ export default function FaqsAccordian(props) {
       align-items: center;
       justify-content: center;
       /* transition: 0.5s ease; */
-      /* color: ${props => (props.show ? "white" : "black")}; */
-      
+      /* color: ${(props) => (props.show ? "white" : "black")}; */
     }
-    .question  {
+    .question {
       cursor: pointer;
     }
     .answers {
       transition: 0.5s ease;
       color: var(--text-color);
-    font-family: Rubik, sans-serif;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 300;
-    margin: 10px;
-    text-align: left;
-    margin: 10px;
-    padding: 10px 10px 10px 40px;
+      font-family: Rubik, sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 300;
+      margin: 10px;
+      text-align: left;
+      margin: 10px;
+      padding: 10px 10px 10px 40px;
     }
   `;
   const [data, setData] = useState(question);

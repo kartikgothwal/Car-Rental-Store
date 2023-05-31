@@ -17,11 +17,11 @@ export const question = [
     {
         id: 4,
         question: " Do you offer insurance coverage for rental cars?",
-        answer: "Yes, we offer insurance coverage options for rental cars. These options may include Collision Damage Waiver (CDW), Loss Damage Waiver (LDW), and Supplemental Liability Insurance (SLI). It's important to review the coverage details and consider your needs when making a decision.",
+        answer: "Yes, we offer insurance coverage options for rental cars. These options may include Collision Damage Waiver (CDW), Loss Damage Waiver (LDW), and Supplemental Liability Insurance (SLI).",
     },
     {
         id: 5,
         question: " Are there any additional fees or charges?",
-        answer: "Additional fees and charges may apply depending on the rental company and location. Common additional fees include taxes, surcharges, airport fees, and optional extras such as GPS devices or child seats. The total cost will be provided to you before completing your reservation.",
+        answer: "Additional fees and charges may apply depending on the rental company and location. Common additional fees include taxes, surcharges, airport fees, and optional extras such as GPS devices or child seats.",
     }
 ]
