@@ -8,6 +8,7 @@ import VehicalCollection from './HomePageComponents/VehicalCollection';
 import HowWorks from './HomePageComponents/HowWorks';
 import Testimonial from './HomePageComponents/Testimonial';
 import FaqsAccordian from './HomePageComponents/FaqsAccordian';
+import Banner from './HomePageComponents/Banner';
 
 export default function App()  {
   return (
@@ -21,6 +22,7 @@ export default function App()  {
     <HowWorks />
     <Testimonial />
     <FaqsAccordian />
+    <Banner />
     </>
   )
 }

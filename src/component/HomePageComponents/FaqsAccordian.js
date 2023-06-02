@@ -99,6 +99,8 @@ export default function FaqsAccordian(props) {
     }
     .question {
       cursor: pointer;
+      font-family: "Rubik", sans-serif;
+      font-size: 21px;
     }
     .answers {
       transition: 0.5s ease;
