@@ -11,6 +11,8 @@ import ToyotaSupraImage from '../images/vehical images/supra.png'
 import TharImage from '../images/vehical images/thar.png'
 import WranglerImage from '../images/vehical images/wrangler.png'
 import RoverImage from '../images/vehical images/rover.png'
+import Hyundai from '../images/vehical images/PngItem_3411055.png'
+
 
 export default function VehicalCollection() {
 
@@ -39,7 +41,7 @@ export default function VehicalCollection() {
       VehicalDetailsText[1].querySelector('h1').textContent = "200lbs";
       VehicalDetailsText[1].querySelector('span').textContent = "Weight";
 
-      VehicalDetailsText[2].querySelector('h1').textContent = "Black";
+      VehicalDetailsText[2].querySelector('h1').textContent = "Blue";
       VehicalDetailsText[2].querySelector('span').textContent = "Color";
 
       VehicalDetailsText[3].querySelector('h1').textContent = "1.99s";
@@ -64,7 +66,7 @@ export default function VehicalCollection() {
       VehicalDetailsText[1].querySelector('h1').textContent = "210lbs";
       VehicalDetailsText[1].querySelector('span').textContent = "Weight";
 
-      VehicalDetailsText[2].querySelector('h1').textContent = "Black";
+      VehicalDetailsText[2].querySelector('h1').textContent = "White";
       VehicalDetailsText[2].querySelector('span').textContent = "Color";
 
       VehicalDetailsText[3].querySelector('h1').textContent = "2.99s";
@@ -107,14 +109,15 @@ export default function VehicalCollection() {
         otherbtn.classList.remove('active');
       })
       targetBtn.classList.add('active');
-      VehicalsImages[0].src = TharImage;
+      // VehicalsImages[0].src = TharImage;
+      VehicalsImages[0].src = Hyundai;
       VehicalDetailsText[0].querySelector('h1').textContent = "240mph";
       VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
 
       VehicalDetailsText[1].querySelector('h1').textContent = "210lbs";
       VehicalDetailsText[1].querySelector('span').textContent = "Weight";
 
-      VehicalDetailsText[2].querySelector('h1').textContent = "Black";
+      VehicalDetailsText[2].querySelector('h1').textContent = "Red";
       VehicalDetailsText[2].querySelector('span').textContent = "Color";
 
       VehicalDetailsText[3].querySelector('h1').textContent = "2.00s";
@@ -139,7 +142,7 @@ export default function VehicalCollection() {
       VehicalDetailsText[1].querySelector('h1').textContent = "300lbs";
       VehicalDetailsText[1].querySelector('span').textContent = "Weight";
 
-      VehicalDetailsText[2].querySelector('h1').textContent = "Black";
+      VehicalDetailsText[2].querySelector('h1').textContent = "White";
       VehicalDetailsText[2].querySelector('span').textContent = "Color";
 
       VehicalDetailsText[3].querySelector('h1').textContent = "1.69s";
@@ -164,7 +167,7 @@ export default function VehicalCollection() {
       VehicalDetailsText[1].querySelector('h1').textContent = "280lbs";
       VehicalDetailsText[1].querySelector('span').textContent = "Weight";
 
-      VehicalDetailsText[2].querySelector('h1').textContent = "Black";
+      VehicalDetailsText[2].querySelector('h1').textContent = "White";
       VehicalDetailsText[2].querySelector('span').textContent = "Color";
 
       VehicalDetailsText[3].querySelector('h1').textContent = "3.99s";
@@ -352,7 +355,7 @@ export default function VehicalCollection() {
                     Mustang GT
                   </button>
                   <button className="vehical-names" id="fourth-vehical" onClick={handleClick}>
-                    Mahindra Thar
+                    Hyundai
                   </button>
                   <button className="vehical-names" id="fifth-vehical" onClick={handleClick}>
                     Jeep Wrangler

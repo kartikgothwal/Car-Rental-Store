@@ -8,17 +8,24 @@ import PorcheImage from "../images/banner/Porsche_logo_PNG5.png";
 import ScionImage from "../images/banner/Scion_logo_PNG8.png";
 import LexusImage from "../images/banner/Lexus_logo_PNG9.png";
 import VolkswagenImage from "../images/banner/Volkswagen_logo_PNG9.png";
+import GroupCars from "../images/banner/pngaaa.png";
+import bg from "../images/banner/bg-1.png";
+import { GlobalStyle } from "../styles/GlobalStyle";
 export default function Banner() {
   const Banner = styled.section`
-    height: 10rem;
+    height: 46rem;
     width: 100%;
     /* border: 2px solid; */
+    background: url(${bg});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--page-background-color);
 
     .banner-container {
-      height: 10rem;
+      height: 46rem;
       width: 100%;
       /* border: 2px solid; */
-      padding: 2rem 4rem;
+      padding: 0rem 4rem 2rem 4rem;
     }
     .banner-content {
       border: 2px solid;
@@ -35,10 +42,17 @@ export default function Banner() {
       height: 50px;
       width: 53px;
     }
+
+    .group-banner-img {
+      width: 100%;
+      position: relative;
+      top: 4rem;
+    }
   `;
 
   return (
     <>
+      <GlobalStyle />
       <Banner className="banner">
         <div className="banner-container">
           <div className="banner-content">
@@ -63,6 +77,13 @@ export default function Banner() {
             <div className="sixth-banner">
               <img src={VolkswagenImage} alt="This is an image" />
             </div>
+          </div>
+          <div>
+            <img
+              className="group-banner-img"
+              src={GroupCars}
+              alt="group cars"
+            />
           </div>
         </div>
       </Banner>

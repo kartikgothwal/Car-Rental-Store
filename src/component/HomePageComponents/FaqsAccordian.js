@@ -6,7 +6,7 @@ import MyfaqsAccordian from "./MyfaqsAccordian";
 export default function FaqsAccordian(props) {
   const MainSection = styled.section`
     /* border: 2px solid; */
-    height: 50rem;
+    height: 55rem;
     .faqContainer {
       display: flex;
       flex-direction: column;
