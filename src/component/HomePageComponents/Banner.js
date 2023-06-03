@@ -11,24 +11,29 @@ import VolkswagenImage from "../images/banner/Volkswagen_logo_PNG9.png";
 import GroupCars from "../images/banner/pngaaa.png";
 import bg from "../images/banner/bg-1.png";
 import { GlobalStyle } from "../styles/GlobalStyle";
+import img from "../images/Download-app/pngegg.png";
+
+import download from "../images//Download-app/download-img-2.png";
+import googlePlay from "../images/Download-app/google play.png";
+import appStore from "../images/Download-app/app store.png";
+
 export default function Banner() {
   const Banner = styled.section`
-    height: 46rem;
+    height: 92rem;
     width: 100%;
     /* border: 2px solid; */
-    background: url(${bg});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--page-background-color);
 
     .banner-container {
-      height: 46rem;
+      background: url(${bg});
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 50rem;
       width: 100%;
       /* border: 2px solid; */
       padding: 0rem 4rem 2rem 4rem;
     }
     .banner-content {
-      border: 2px solid;
+      /* border: 2px solid; */
       height: 6rem;
       width: 100%;
       border-radius: 20px;
@@ -46,7 +51,75 @@ export default function Banner() {
     .group-banner-img {
       width: 100%;
       position: relative;
-      top: 4rem;
+      top: 6rem;
+    }
+    .download {
+      background-color: var(--page-background-color);
+      height: 54rem;
+      padding: 7rem 0 0 0;
+    }
+    .download-container {
+      height: 31rem;
+      display: flex;
+      /* align-items: center; */
+      /* justify-content: center; */
+    }
+    .download-img {
+      /* border: 2px solid; */
+      background: url(${img});
+      background-repeat: no-repeat;
+      background-position: 20px -70px;
+      background-size: 46rem 45rem;
+
+      height: 43rem;
+      width: 50rem;
+    }
+    .download-img img {
+      height: 36rem;
+      width: 45rem;
+    }
+    .download-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 5rem;
+      padding-right: 3rem;
+      gap: 22px;
+    }
+    .download-content h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      text-align: center;
+      font-family: "poppins", sans-serif;
+    }
+    .download-content p {
+      color: var(--text-color);
+      font-family: "Rubik", sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 300;
+      text-align: center;
+      margin: 10px;
+    }
+    .download-links {
+      /* border: 2px solid; */
+      height: 5rem;
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+    .download-links img {
+      height: 5rem;
+      width: 16rem;
+    }
+    .google-maps-images {
+      width: 100%;
+      height: 450px;
     }
   `;
 
@@ -86,6 +159,44 @@ export default function Banner() {
             />
           </div>
         </div>
+        <section className="download">
+          <div className="download-container">
+            <div className="download-img">
+              <img src={download} alt="download-our-app" />
+            </div>
+            <div className="download-content">
+              <h1>Download our app to get most out of it!!</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Exercitationem fugit in accusantium, cumque, inventore adipisci
+                quis, quasi libero ad corporis minima beatae amet modi tempora
+                quibusdam! Nam officiis, similique ipsam, obcaecati modi
+                nesciunt, provident vitae assumenda blanditiis repudiandae
+                laudantium eaque.
+              </p>
+
+              <div className="download-links">
+                <a href="https://car-rental-store.vercel.app/" target="_blank">
+                  <img src={googlePlay} alt="download-now" />
+                </a>
+                <a href="https://car-rental-store.vercel.app/" target="_blank">
+                  <img src={appStore} alt="download-now" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="google-maps-images">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117756.85248567844!2d75.65771979726566!3d22.731897000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdc859bc94ab%3A0xdb2d9bb53213f853!2sCar%20Rental!5e0!3m2!1sen!2sin!4v1685815339461!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: "0" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
       </Banner>
     </>
   );
