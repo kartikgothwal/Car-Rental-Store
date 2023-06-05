@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { question } from "./MyFaqsAccordianQuestions";
 import MyfaqsAccordian from "./MyfaqsAccordian";
-
+import bgImage from "../images/FAQ section Bg image/bg-image2.png";
 export default function FaqsAccordian(props) {
   const MainSection = styled.section`
     /* border: 2px solid; */
     height: 55rem;
+    /* background: url(${bgImage});
+    background-repeat: no-repeat;
+    background-position: 20px -70px;
+    background-size: 46rem 45rem; */
     .faqContainer {
       display: flex;
       flex-direction: column;
@@ -113,10 +117,18 @@ export default function FaqsAccordian(props) {
       text-align: left;
       margin: 10px;
       padding: 10px 10px 10px 40px;
+      transition: 0.4s ease;
+      background-color: var(--white-color);
     }
   `;
-  const [data, setData] = useState(question);
+  const [data] = useState(question);
+  const [ActiveQuestionId, SetActiveQuestionId] = useState(null);
 
+  const HandleToggle = (questionID) => {
+    SetActiveQuestionId((prevId) =>
+      prevId === questionID ? null : questionID
+    );
+  };
   return (
     <>
       <MainSection className="faqPage">
@@ -132,12 +144,16 @@ export default function FaqsAccordian(props) {
               <div className="faq-content-div-box-content">
                 {data.map((CurrElement) => {
                   return (
-                    <MyfaqsAccordian key={CurrElement.id} {...CurrElement} />
+                    <MyfaqsAccordian
+                      key={CurrElement.id}
+                      isActive={ActiveQuestionId === CurrElement.id}
+                      onToggle={() => {
+                        HandleToggle(CurrElement.id);
+                      }}
+                      {...CurrElement}
+                    />
                   );
                 })}
-              </div>
-              <div className="faq-bg-img">
-                <img src="" alt="" />
               </div>
             </div>
           </div>

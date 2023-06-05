@@ -117,21 +117,25 @@ export default function Booking() {
                       <i className="fa-solid fa-car booking-icon"></i>Select a
                       car*
                     </label>
-                    <select name="CarSelect" id="CarSelect">
-                      <option defaultValue="" disabled>
+                    <select
+                      name="CarSelect"
+                      defaultValue="Selected"
+                      id="CarSelect"
+                    >
+                      <option value="Selected" disabled>
                         Select car
                       </option>
-                      <option defaultValue="">Mustang GT</option>
-                      <option defaultValue="">Toyota Supra</option>
-                      <option defaultValue="">Mahindra Thar</option>
-                      <option defaultValue="">Audi A3</option>
-                      <option defaultValue="">Audi RS5</option>
-                      <option defaultValue="">Corvette</option>
-                      <option defaultValue="">Mahindra Scorpio</option>
-                      <option defaultValue="">Lamborghini Huracan</option>
-                      <option defaultValue="">Bugatti Chiron</option>
-                      <option defaultValue="">Jeep Wrangler Rubicon</option>
-                      <option defaultValue="">Mercedes Benz</option>
+                      <option value="option1">Mustang GT</option>
+                      <option value="option2">Toyota Supra</option>
+                      <option value="option3">Mahindra Thar</option>
+                      <option value="option4">Audi A3</option>
+                      <option value="option5">Audi RS5</option>
+                      <option value="option6">Corvette</option>
+                      <option value="option7">Mahindra Scorpio</option>
+                      <option value="option8">Lamborghini Huracan</option>
+                      <option value="option9">Bugatti Chiron</option>
+                      <option value="option10">Jeep Wrangler Rubicon</option>
+                      <option value="option11">Mercedes Benz</option>
                     </select>
                   </article>
                   <article>
@@ -139,15 +143,19 @@ export default function Booking() {
                       <i className="fa-solid fa-location-dot booking-icon"></i>{" "}
                       Pick up location*
                     </label>
-                    <select name="PickUpLocation" id="PickUpLocation">
-                      <option defaultValue="" selected disabled>
+                    <select
+                      name="PickUpLocation"
+                      defaultValue="selected"
+                      id="PickUpLocation"
+                    >
+                      <option value="selected" disabled>
                         Select location
                       </option>
-                      <option defaultValue="">Mumbai</option>
-                      <option defaultValue="">Indore</option>
-                      <option defaultValue="">Chandigarh</option>
-                      <option defaultValue="">Koltata</option>
-                      <option defaultValue="">Delhi</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Indore">Indore</option>
+                      <option value="Chandigarh">Chandigarh</option>
+                      <option value="Koltata">Koltata</option>
+                      <option value="Delhi">Delhi</option>
                     </select>
                   </article>
                   <article>
@@ -155,15 +163,17 @@ export default function Booking() {
                       <i className="fa-solid fa-location-dot booking-icon"></i>{" "}
                       Drop Off location*
                     </label>
-                    <select name="DropOffLocation" id="DropOffLocation">
-                      <option defaultValue="" selected disabled>
-                        Select location
-                      </option>
-                      <option defaultValue="">Mumbai</option>
-                      <option defaultValue="">Indore</option>
-                      <option defaultValue="">Chandigarh</option>
-                      <option defaultValue="">Koltata</option>
-                      <option defaultValue="">Delhi</option>
+                    <select
+                      name="DropOffLocation"
+                      defaultValue="Selected"
+                      id="DropOffLocation"
+                    >
+                      <option value="Selected">Select location</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Indore">Indore</option>
+                      <option value="Chandigarh">Chandigarh</option>
+                      <option value="Koltata">Koltata</option>
+                      <option value="Delhi">Delhi</option>
                     </select>
                   </article>
                 </div>

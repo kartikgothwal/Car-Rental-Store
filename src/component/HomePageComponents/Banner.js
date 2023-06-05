@@ -70,7 +70,6 @@ export default function Banner() {
       background-repeat: no-repeat;
       background-position: 20px -70px;
       background-size: 46rem 45rem;
-
       height: 43rem;
       width: 50rem;
     }
@@ -192,9 +191,9 @@ export default function Banner() {
             width="100%"
             height="450"
             style={{ border: "0" }}
-            allowfullscreen=""
+            allowFullScreen z
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="..."
           ></iframe>
         </section>
       </Banner>
