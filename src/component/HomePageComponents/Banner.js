@@ -19,7 +19,7 @@ import appStore from "../images/Download-app/app store.png";
 
 export default function Banner() {
   const Banner = styled.section`
-    height: 92rem;
+    height: 133rem;
     width: 100%;
     /* border: 2px solid; */
 
@@ -57,9 +57,10 @@ export default function Banner() {
       background-color: var(--page-background-color);
       height: 54rem;
       padding: 7rem 0 0 0;
+         /* border: 2px solid; */
     }
     .download-container {
-      height: 31rem;
+      height: 47rem;
       display: flex;
       /* align-items: center; */
       /* justify-content: center; */
@@ -191,9 +192,10 @@ export default function Banner() {
             width="100%"
             height="450"
             style={{ border: "0" }}
-            allowFullScreen z
+            allowFullScreen
+            z
             loading="lazy"
-            referrerPolicy="..."
+            referrerPolicy="..."  
           ></iframe>
         </section>
       </Banner>

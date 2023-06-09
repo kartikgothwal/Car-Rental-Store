@@ -14,7 +14,7 @@ export default function Navbar() {
     }
 
     /* Left section of the navbar */
-    .left-section {
+    /* .left-section {
       display: flex;
       align-items: center;
       margin: 18px 27px;
@@ -24,7 +24,7 @@ export default function Navbar() {
       height: 58px;
       margin-left: -27px;
       width: 154px;
-    }
+    } */
 
     #logo-heading {
       color: red;

@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ /* Left section of the navbar */
+ .left-section {
+  display: flex;
+  align-items: center;
+  margin: 18px 27px;
+}
+
+.logo-img {
+  height: 58px;
+  margin-left: -27px;
+  width: 154px;
+}
