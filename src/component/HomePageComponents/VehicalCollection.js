@@ -10,7 +10,7 @@ import CorvetteImage from "../images/vehical images/corvette.png";
 
 export default function VehicalCollection() {
   const ClickedBtn = useRef([]);
-  const TargetImage = useRef();
+
   const [CarDetails, SetCarDetails] = useState({
     Mileage: "200mph",
     Weight: "200lbs",
@@ -20,22 +20,24 @@ export default function VehicalCollection() {
     Available: "Mumbai",
     image: CorvetteImage,
   });
-  const [Carimage, SetImage] = useState(CorvetteImage);
+
 
   const handleClick = (btnID) => {
+
     const TargetBtn = ClickedBtn.current[btnID];
-    ClickedBtn.current.forEach((Elements) => {
-      Elements.classList.remove("active");
+    ClickedBtn.current.forEach((Btns) => {
+      Btns.classList.remove("active");
     });
     TargetBtn.classList.add("active");
-    SetImage(Details[btnID].image);
+  
     SetCarDetails({
       Mileage: Details[btnID].Mileage,
       Weight: Details[btnID].Weight,
       Color: Details[btnID].Color,
        Speed: Details[btnID].Speed,
       Charges: Details[btnID].Charges,
-      Available: Details[btnID].Available
+      Available: Details[btnID].Available,
+      image: Details[btnID].image,
     })
 
   };
@@ -259,10 +261,10 @@ export default function VehicalCollection() {
               </div>
               <div className="vehicals-images">
                 <img
-                  src={Carimage}
+                  src={CarDetails.image}
                   alt="vehical-images"
                   id="vehical-pictures"
-                  ref={TargetImage}
+                  
                 />
               </div>
               <div className="vehicals-details">

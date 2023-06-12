@@ -110,7 +110,7 @@ export default function Navbar() {
       <HeaderTop id="header">
         <nav id="navbar">
           <div className="left-section">
-            <NavLink to="/">
+            <NavLink to="https://car-rental-store.vercel.app/">
               <img src={logo} className="logo-img" alt="Logo" />
             </NavLink>
           </div>
