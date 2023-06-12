@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import Details from "./VehicalCollectionDetailsApi";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import styled from "styled-components";
 import { FaGasPump, FaWeight } from "react-icons/fa";
@@ -6,181 +7,43 @@ import { BsSpeedometer } from "react-icons/bs";
 import { MdColorLens } from "react-icons/md";
 import { HiCurrencyRupee, HiLocationMarker } from "react-icons/hi";
 import CorvetteImage from "../images/vehical images/corvette.png";
-import MustangImage from '../images/vehical images/Mustang.png'
-import ToyotaSupraImage from '../images/vehical images/supra.png'
-import TharImage from '../images/vehical images/thar.png'
-import WranglerImage from '../images/vehical images/wrangler.png'
-import RoverImage from '../images/vehical images/rover.png'
-import Hyundai from '../images/vehical images/PngItem_3411055.png'
-
 
 export default function VehicalCollection() {
+  const ClickedBtn = useRef([]);
+  const TargetImage = useRef();
+  const [CarDetails, SetCarDetails] = useState({
+    Mileage: "200mph",
+    Weight: "200lbs",
+    Color: "Black",
+    Speed: "1.99s",
+    Charges: "4000",
+    Available: "Mumbai",
+    image: CorvetteImage,
+  });
+  const [Carimage, SetImage] = useState(CorvetteImage);
 
-  const handleClick = (e) => {
-    const VehicalDetailsText = document.querySelectorAll('.vehical-detail-text');
-    const VehicalsImages = document.querySelectorAll('#vehical-pictures');
-    const VehicalBtns = document.querySelectorAll('.vehical-names');
-
-    var targetBtn = e.target;
-    var targetBtnID = targetBtn.getAttribute('id');
-
-    VehicalBtns.forEach(btn => {
-      btn.classList.remove('active');
+  const handleClick = (btnID) => {
+    const TargetBtn = ClickedBtn.current[btnID];
+    ClickedBtn.current.forEach((Elements) => {
+      Elements.classList.remove("active");
+    });
+    TargetBtn.classList.add("active");
+    SetImage(Details[btnID].image);
+    SetCarDetails({
+      Mileage: Details[btnID].Mileage,
+      Weight: Details[btnID].Weight,
+      Color: Details[btnID].Color,
+       Speed: Details[btnID].Speed,
+      Charges: Details[btnID].Charges,
+      Available: Details[btnID].Available
     })
 
-    if (targetBtnID === "first-vehical") {
-      VehicalBtns.forEach(otherbtn => {
-        otherbtn.classList.remove('active');
-      })
-      targetBtn.classList.add('active');
-      VehicalsImages[0].src = CorvetteImage;
-     console.log(VehicalDetailsText)
-      VehicalDetailsText[0].querySelector('h1').textContent = "200mph";
-      VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
+  };
 
-      VehicalDetailsText[1].querySelector('h1').textContent = "200lbs";
-      VehicalDetailsText[1].querySelector('span').textContent = "Weight";
+  const updateRef = (index) => (ref) => {
+    ClickedBtn.current[index] = ref;
+  };
 
-      VehicalDetailsText[2].querySelector('h1').textContent = "Blue";
-      VehicalDetailsText[2].querySelector('span').textContent = "Color";
-
-      VehicalDetailsText[3].querySelector('h1').textContent = "1.99s";
-      VehicalDetailsText[3].querySelector('span').textContent = "0-60 mph";
-
-      VehicalDetailsText[4].querySelector('h1').textContent = "4000";
-      VehicalDetailsText[4].querySelector('span').textContent = "per day";
-
-      VehicalDetailsText[5].querySelector('h1').textContent = "Mumbai";
-      VehicalDetailsText[5].querySelector('span').textContent = "Available at";
-    }
-
-    if (targetBtnID === "second-vehical") {
-      VehicalBtns.forEach((otherbtn) => {
-        otherbtn.classList.remove('active');
-      })
-      targetBtn.classList.add('active');
-      VehicalsImages[0].src = ToyotaSupraImage;
-      VehicalDetailsText[0].querySelector('h1').textContent = "260mph";
-      VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
-
-      VehicalDetailsText[1].querySelector('h1').textContent = "210lbs";
-      VehicalDetailsText[1].querySelector('span').textContent = "Weight";
-
-      VehicalDetailsText[2].querySelector('h1').textContent = "White";
-      VehicalDetailsText[2].querySelector('span').textContent = "Color";
-
-      VehicalDetailsText[3].querySelector('h1').textContent = "2.99s";
-      VehicalDetailsText[3].querySelector('span').textContent = "0-60 mph";
-
-      VehicalDetailsText[4].querySelector('h1').textContent = "3000";
-      VehicalDetailsText[4].querySelector('span').textContent = "per day";
-
-      VehicalDetailsText[5].querySelector('h1').textContent = "Indore";
-      VehicalDetailsText[5].querySelector('span').textContent = "Available at";
-    }
-
-    if (targetBtnID === "third-vehical") {
-      VehicalBtns.forEach(otherbtn => {
-        otherbtn.classList.remove('active');
-      })
-      targetBtn.classList.add('active');
-      VehicalsImages[0].src = MustangImage;
-      VehicalDetailsText[0].querySelector('h1').textContent = "180mph";
-      VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
-
-      VehicalDetailsText[1].querySelector('h1').textContent = "250lbs";
-      VehicalDetailsText[1].querySelector('span').textContent = "Weight";
-
-      VehicalDetailsText[2].querySelector('h1').textContent = "Black";
-      VehicalDetailsText[2].querySelector('span').textContent = "Color";
-
-      VehicalDetailsText[3].querySelector('h1').textContent = "2.50s";
-      VehicalDetailsText[3].querySelector('span').textContent = "0-60 mph";
-
-      VehicalDetailsText[4].querySelector('h1').textContent = "2500";
-      VehicalDetailsText[4].querySelector('span').textContent = "per day";
-
-      VehicalDetailsText[5].querySelector('h1').textContent = "Delhi";
-      VehicalDetailsText[5].querySelector('span').textContent = "Available at";
-    }
-
-    if (targetBtnID === "fourth-vehical") {
-      VehicalBtns.forEach(otherbtn => {
-        otherbtn.classList.remove('active');
-      })
-      targetBtn.classList.add('active');
-      // VehicalsImages[0].src = TharImage;
-      VehicalsImages[0].src = Hyundai;
-      VehicalDetailsText[0].querySelector('h1').textContent = "240mph";
-      VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
-
-      VehicalDetailsText[1].querySelector('h1').textContent = "210lbs";
-      VehicalDetailsText[1].querySelector('span').textContent = "Weight";
-
-      VehicalDetailsText[2].querySelector('h1').textContent = "Red";
-      VehicalDetailsText[2].querySelector('span').textContent = "Color";
-
-      VehicalDetailsText[3].querySelector('h1').textContent = "2.00s";
-      VehicalDetailsText[3].querySelector('span').textContent = "0-60 mph";
-
-      VehicalDetailsText[4].querySelector('h1').textContent = "4100";
-      VehicalDetailsText[4].querySelector('span').textContent = "per day";
-
-      VehicalDetailsText[5].querySelector('h1').textContent = "Chandigarh";
-      VehicalDetailsText[5].querySelector('span').textContent = "Available at";
-    }
-
-    if (targetBtnID === "fifth-vehical") {
-      VehicalBtns.forEach(otherbtn => {
-        otherbtn.classList.remove('active');
-      })
-      targetBtn.classList.add('active');
-      VehicalsImages[0].src = WranglerImage;
-      VehicalDetailsText[0].querySelector('h1').textContent = "230mph";
-      VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
-
-      VehicalDetailsText[1].querySelector('h1').textContent = "300lbs";
-      VehicalDetailsText[1].querySelector('span').textContent = "Weight";
-
-      VehicalDetailsText[2].querySelector('h1').textContent = "White";
-      VehicalDetailsText[2].querySelector('span').textContent = "Color";
-
-      VehicalDetailsText[3].querySelector('h1').textContent = "1.69s";
-      VehicalDetailsText[3].querySelector('span').textContent = "0-60 mph";
-
-      VehicalDetailsText[4].querySelector('h1').textContent = "5000";
-      VehicalDetailsText[4].querySelector('span').textContent = "per day";
-
-      VehicalDetailsText[5].querySelector('h1').textContent = "Kolkata";
-      VehicalDetailsText[5].querySelector('span').textContent = "Available at";
-    }
-
-    if (targetBtnID === "sixth-vehical") {
-      VehicalBtns.forEach(otherbtn => {
-        otherbtn.classList.remove('active');
-      })
-      targetBtn.classList.add('active');
-      VehicalsImages[0].src = RoverImage;
-      VehicalDetailsText[0].querySelector('h1').textContent = "210mph";
-      VehicalDetailsText[0].querySelector('span').textContent = "Mileage";
-
-      VehicalDetailsText[1].querySelector('h1').textContent = "280lbs";
-      VehicalDetailsText[1].querySelector('span').textContent = "Weight";
-
-      VehicalDetailsText[2].querySelector('h1').textContent = "White";
-      VehicalDetailsText[2].querySelector('span').textContent = "Color";
-
-      VehicalDetailsText[3].querySelector('h1').textContent = "3.99s";
-      VehicalDetailsText[3].querySelector('span').textContent = "0-60 mph";
-
-      VehicalDetailsText[4].querySelector('h1').textContent = "3500";
-      VehicalDetailsText[4].querySelector('span').textContent = "per day";
-
-      VehicalDetailsText[5].querySelector('h1').textContent = "Indore";
-      VehicalDetailsText[5].querySelector('span').textContent = "Available at";
-    }
-
-  }
   const Wrapper = styled.section`
     padding: 0 3rem 0 3rem;
     /* padding-top: 3rem; */
@@ -266,7 +129,7 @@ export default function VehicalCollection() {
     }
     #vehical-pictures {
       height: 23rem;
-      width: 32rem
+      width: 32rem;
     }
 
     .vehicals-details {
@@ -337,7 +200,6 @@ export default function VehicalCollection() {
                 Our rental collection
               </h1>
               <p>
-               
                 Discover a range of fantastic vehicles to rent for your upcoming
                 business or leisure travel.
               </p>
@@ -345,35 +207,70 @@ export default function VehicalCollection() {
             <div className="vehical-collections">
               <div className="vehicals">
                 <div id="Vehical-table">
-                  <button className="vehical-names active" id="first-vehical" onClick={handleClick}>
+                  <button
+                    className="vehical-names active"
+                    id="first-vehical"
+                    ref={updateRef(0)}
+                    onClick={() => handleClick(0)}
+                  >
                     Corvette
                   </button>
-                  <button className="vehical-names" id="second-vehical" onClick={handleClick}>
+                  <button
+                    className="vehical-names"
+                    id="second-vehical"
+                    ref={updateRef(1)}
+                    onClick={() => handleClick(1)}
+                  >
                     Toyota Supra
                   </button>
-                  <button className="vehical-names" id="third-vehical" onClick={handleClick}>
+                  <button
+                    className="vehical-names"
+                    id="third-vehical"
+                    onClick={() => handleClick(2)}
+                    ref={updateRef(2)}
+                  >
                     Mustang GT
                   </button>
-                  <button className="vehical-names" id="fourth-vehical" onClick={handleClick}>
+                  <button
+                    className="vehical-names"
+                    id="fourth-vehical"
+                    onClick={() => handleClick(3)}
+                    ref={updateRef(3)}
+                  >
                     Hyundai
                   </button>
-                  <button className="vehical-names" id="fifth-vehical" onClick={handleClick}>
+                  <button
+                    className="vehical-names"
+                    id="fifth-vehical"
+                    onClick={() => handleClick(4)}
+                    ref={updateRef(4)}
+                  >
                     Jeep Wrangler
                   </button>
-                  <button className="vehical-names" id="sixth-vehical" onClick={handleClick}>
+                  <button
+                    className="vehical-names"
+                    id="sixth-vehical"
+                    onClick={() => handleClick(5)}
+                    ref={updateRef(5)}
+                  >
                     Land Rover
                   </button>
                 </div>
               </div>
               <div className="vehicals-images">
-                <img src={CorvetteImage} alt="vehical-images" id="vehical-pictures" />
+                <img
+                  src={Carimage}
+                  alt="vehical-images"
+                  id="vehical-pictures"
+                  ref={TargetImage}
+                />
               </div>
               <div className="vehicals-details">
                 <div className="vehical-details-header">
                   <div className="vehical-detail-container">
                     <FaGasPump className="vehical-details-icon first-container-icon"></FaGasPump>
                     <div className="vehical-detail-text">
-                      <h1>200mph</h1>
+                      <h1>{CarDetails.Mileage}</h1>
                       <span>Mileage</span>
                     </div>
                   </div>
@@ -381,7 +278,7 @@ export default function VehicalCollection() {
                   <div className="vehical-detail-container">
                     <FaWeight className="fa-solid fa-weight-scale vehical-details-icon first-container-icon"></FaWeight>
                     <div className="vehical-detail-text">
-                      <h1>200lbs</h1>
+                      <h1>{CarDetails.Weight}</h1>
                       <span>Weight</span>
                     </div>
                   </div>
@@ -391,7 +288,7 @@ export default function VehicalCollection() {
                   <div className="vehical-detail-container">
                     <MdColorLens className="fa-sharp fa-solid fa-palette vehical-details-icon second-container-icon"></MdColorLens>
                     <div className="vehical-detail-text">
-                      <h1>Black </h1>
+                      <h1>{CarDetails.Color} </h1>
                       <span>Color </span>
                     </div>
                   </div>
@@ -399,7 +296,7 @@ export default function VehicalCollection() {
                   <div className="vehical-detail-container">
                     <BsSpeedometer className="fa-solid fa-gauge vehical-details-icon second-container-icon"></BsSpeedometer>
                     <div className="vehical-detail-text">
-                      <h1>1.99s</h1>
+                      <h1>{CarDetails.Speed}</h1>
                       <span>0-60 mph</span>
                     </div>
                   </div>
@@ -409,7 +306,7 @@ export default function VehicalCollection() {
                   <div className="vehical-detail-container">
                     <HiCurrencyRupee className="fa-solid fa-dollar-sign vehical-details-icon third-container-icon"></HiCurrencyRupee>
                     <div className="vehical-detail-text">
-                      <h1>4000</h1>
+                      <h1>{CarDetails.Charges}</h1>
                       <span>per day</span>
                     </div>
                   </div>
@@ -417,7 +314,7 @@ export default function VehicalCollection() {
                   <div className="vehical-detail-container">
                     <HiLocationMarker className="fa-solid fa-location-dot vehical-details-icon third-container-icon"></HiLocationMarker>
                     <div className="vehical-detail-text">
-                      <h1>Mumbai</h1>
+                      <h1>{CarDetails.Available}</h1>
                       <span>Available at</span>
                     </div>
                   </div>
