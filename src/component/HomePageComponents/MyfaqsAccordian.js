@@ -38,7 +38,7 @@ export default function MyfaqsAccordian(props) {
           // onClick={props.onToggle}
           style={BgColor}
         >
-          <p style={BgColor}>{show ? <GrSubtract /> : <TiPlus />}</p>
+          <p style={BgColor}>{show ? <GrSubtract style={{color:"white"}} /> : <TiPlus />}</p>
           <h1 className="question">{props.question}</h1>
         </div>
         {show && <p className="answers">{props.answer}</p>}

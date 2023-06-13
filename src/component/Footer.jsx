@@ -14,6 +14,7 @@ export default function Footer() {
     height: 50rem;
     position: relative;
     bottom: 0;
+    padding-top: 32px;
     width: 100%;
     background-color: var(--white-color);
     .footer-container {
@@ -23,14 +24,14 @@ export default function Footer() {
       bottom: 0;
       width: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      /* align-items: center; */
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
     .first-footer-block {
-      border: 2px solid;
-      width: 44rem;
+      /* border: 2px solid; */
+      width: 40rem;
       padding: 20px;
     }
     .first-footer-block-container {
@@ -69,8 +70,8 @@ export default function Footer() {
       font-family: "poppins", "sans-serif";
     }
     .footer-btn {
-      width: 100%;
-      height: 3.9rem;
+      width: 37rem;
+      height: 3.5rem;
       font-weight: bold;
       box-shadow: rgba(255, 83, 48, 0.35) 0px 10px 15px 0px;
       color: var(--white-color);
@@ -94,8 +95,8 @@ export default function Footer() {
     #name,
     #email {
       height: 3rem;
-      font-size: 1rem;
-      width: 20rem;
+      font-size: 14px;
+      width: 18rem;
       font-family: Rubik;
       padding: 0px 10px;
       color: var(--black-color);
@@ -161,6 +162,46 @@ export default function Footer() {
     .icons-socials {
       font-size: 25px;
       color: white;
+    }
+    .footer-section-heading {
+      font-size: 18px;
+      /* border: 2px solid; */
+      padding: 10px;
+      text-align: left;
+      font-family: poppins, "sans-serif";
+      letter-spacing: 2px;
+    }
+    .footer-section-container{
+      margin: 10px 0;
+      /* border: 2px solid; */
+    }
+    .footer-section-container ul{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-section-container ul li{
+       list-style: none;
+    }
+    .Footer-NavLinks{
+      font-family: Rubik, "sans-serif";
+      text-decoration:none;
+      color:var(--black-color);
+      padding-left: 10px;
+
+    }
+    .footer-{
+       list-style: none;
+    }
+    
+    .second-footer-block {
+      /* border: 2px solid; */
+    }
+    .third-footer-block {
+      /* border: 2px solid; */
+    }
+    .fourth-footer-block {
+      /* border: 2px solid; */
     }
   `;
 
@@ -231,9 +272,61 @@ export default function Footer() {
               </section>
             </div>
           </div>
-          <div className="second-footer-block"></div>
-          <div className="third-footer-block"></div>
-          <div className="fourth-footer-block"></div>
+          <div className="second-footer-block">
+            <div className="second-footer-block-container">
+              <h1 className="footer-section-heading">COMPANY</h1>
+              <div className="footer-section-container">
+                <ul>
+                  <li>
+                    <NavLink to="/about" className="Footer-NavLinks">About</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/ourteam" className="Footer-NavLinks">Experts</NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="third-footer-block">
+            <div className="third-footer-block-container">
+              <h1 className="footer-section-heading">IMPORTANT LINKS</h1>
+              <div className="footer-section-container">
+                <ul>
+                  <li>
+                    <NavLink to="/contact" className="Footer-NavLinks">Contact Us</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/" className="Footer-NavLinks">My Account</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/" className="Footer-NavLinks">Store Locator</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/testimonial" className="Footer-NavLinks">Testimonial</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/vehicalsmodels" className="Footer-NavLinks">Vehical Models</NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="fourth-footer-block">
+            <h1 className="footer-section-heading">MORE TO EXPLORE</h1>
+            <div className="footer-section-container">
+              <ul>
+                <li>
+                  <NavLink to="/ourteam" className="Footer-NavLinks">Our Team</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/" className="Footer-NavLinks">New Offers</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/" className="Footer-NavLinks">New Rewards</NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </FooterComponent>
     </>
