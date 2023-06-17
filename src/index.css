@@ -17,7 +17,9 @@ code {
   align-items: center;
   margin: 18px 27px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .logo-img {
   height: 58px;
   margin-left: -27px;
