@@ -193,7 +193,7 @@ export default function Banner() {
             height="450"
             style={{ border: "0" }}
             allowFullScreen
-            z
+           
             loading="lazy"
             referrerPolicy="..."  
           ></iframe>

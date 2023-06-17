@@ -10,7 +10,7 @@ import CorvetteImage from "../images/vehical images/corvette.png";
 
 export default function VehicalCollection() {
   const ClickedBtn = useRef([]);
-
+  const [activeButton, setActiveButton] = useState(0);
   const [CarDetails, SetCarDetails] = useState({
     Mileage: "200mph",
     Weight: "200lbs",
@@ -21,25 +21,18 @@ export default function VehicalCollection() {
     image: CorvetteImage,
   });
 
-
   const handleClick = (btnID) => {
-
-    const TargetBtn = ClickedBtn.current[btnID];
-    ClickedBtn.current.forEach((Btns) => {
-      Btns.classList.remove("active");
-    });
-    TargetBtn.classList.add("active");
-  
+    // const TargetBtn = ClickedBtn.current[btnID];
+    setActiveButton(btnID);
     SetCarDetails({
       Mileage: Details[btnID].Mileage,
       Weight: Details[btnID].Weight,
       Color: Details[btnID].Color,
-       Speed: Details[btnID].Speed,
+      Speed: Details[btnID].Speed,
       Charges: Details[btnID].Charges,
       Available: Details[btnID].Available,
       image: Details[btnID].image,
-    })
-
+    });
   };
 
   const updateRef = (index) => (ref) => {
@@ -112,8 +105,8 @@ export default function VehicalCollection() {
 
     .vehical-names {
       font-family: Poppins, sans-serif;
-      background-color: var(--vehical-name-bg-color);
-      color: var(--black-color);
+      /* background-color: var(--vehical-name-bg-color);
+      color: var(--black-color); */
       border: none;
       height: 3.7rem;
       font-size: 1.15rem;
@@ -125,10 +118,7 @@ export default function VehicalCollection() {
       width: 37rem;
       padding: 2rem 3rem;
     }
-    .active {
-      background-color: var(--btn-background-color);
-      color: white;
-    }
+
     #vehical-pictures {
       height: 23rem;
       width: 32rem;
@@ -188,6 +178,10 @@ export default function VehicalCollection() {
       font-size: 14px;
       text-align: center;
     }
+    .vehical-names.active {
+      background-color: var(--btn-background-color);
+      color: white;
+    }
   `;
 
   return (
@@ -210,7 +204,9 @@ export default function VehicalCollection() {
               <div className="vehicals">
                 <div id="Vehical-table">
                   <button
-                    className="vehical-names active"
+                    className={`vehical-names ${
+                      activeButton === 0 ? "active" : ""
+                    } `}
                     id="first-vehical"
                     ref={updateRef(0)}
                     onClick={() => handleClick(0)}
@@ -218,7 +214,9 @@ export default function VehicalCollection() {
                     Corvette
                   </button>
                   <button
-                    className="vehical-names"
+                    className={`vehical-names ${
+                      activeButton === 1 ? "active" : ""
+                    } `}
                     id="second-vehical"
                     ref={updateRef(1)}
                     onClick={() => handleClick(1)}
@@ -226,7 +224,9 @@ export default function VehicalCollection() {
                     Toyota Supra
                   </button>
                   <button
-                    className="vehical-names"
+                    className={`vehical-names ${
+                      activeButton === 2 ? "active" : ""
+                    } `}
                     id="third-vehical"
                     onClick={() => handleClick(2)}
                     ref={updateRef(2)}
@@ -234,7 +234,9 @@ export default function VehicalCollection() {
                     Mustang GT
                   </button>
                   <button
-                    className="vehical-names"
+                    className={`vehical-names ${
+                      activeButton === 3 ? "active" : ""
+                    } `}
                     id="fourth-vehical"
                     onClick={() => handleClick(3)}
                     ref={updateRef(3)}
@@ -242,7 +244,9 @@ export default function VehicalCollection() {
                     Hyundai
                   </button>
                   <button
-                    className="vehical-names"
+                    className={`vehical-names ${
+                      activeButton === 4 ? "active" : ""
+                    } `}
                     id="fifth-vehical"
                     onClick={() => handleClick(4)}
                     ref={updateRef(4)}
@@ -250,7 +254,9 @@ export default function VehicalCollection() {
                     Jeep Wrangler
                   </button>
                   <button
-                    className="vehical-names"
+                    className={`vehical-names ${
+                      activeButton === 5 ? "active" : ""
+                    } `}
                     id="sixth-vehical"
                     onClick={() => handleClick(5)}
                     ref={updateRef(5)}
@@ -264,7 +270,6 @@ export default function VehicalCollection() {
                   src={CarDetails.image}
                   alt="vehical-images"
                   id="vehical-pictures"
-                  
                 />
               </div>
               <div className="vehicals-details">
