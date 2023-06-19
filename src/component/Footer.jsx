@@ -42,13 +42,13 @@ export default function Footer() {
     .first-footer-block {
       /* border: 2px solid; */
       width: 40rem;
-      padding: 20px;
+      padding: 0 20px 20px 20px;
     }
     .first-footer-block-container {
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: 4rem;
+      margin-top: 2rem;
       /* border: 2px solid; */
     }
 
@@ -306,7 +306,7 @@ export default function Footer() {
                       <input type="email" name="email" id="email" />
                     </div>
                   </div>
-                  <button className="footer-btn">SIGN UP</button>
+                  <button className="footer-btn">SUBSCRIBE</button>
                 </form>
                 <p className="terms-condition-para">
                   This is intended for customer. By signing up, you understand

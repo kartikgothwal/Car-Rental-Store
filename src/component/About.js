@@ -1,12 +1,13 @@
 import React from 'react'
+import Footer from './Footer'
+import AboutHome from './AboutSectionComponents/AboutHome'
  
  
 export default function About() {
   return (
   <>
-     <div>
-      about Section
-     </div>
+   <AboutHome />
+   <Footer />
   </>
   )
 }
