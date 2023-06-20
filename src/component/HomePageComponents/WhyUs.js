@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import {AiFillCar} from 'react-icons/ai'
 import {FaPiggyBank, FaThumbsUp} from 'react-icons/fa'
  
-export default function WhyUs() {
+export default function WhyUs(props) {
     const Wrapper = styled.section`
     
 .why-us-header {
@@ -110,48 +110,42 @@ export default function WhyUs() {
                     <div className="why-us-container">
 
                         <div className="left-section-of-why-us">
-                            <h1 className="why-us-heading">Why Choose Us</h1>
+                            <h1 className="why-us-heading">{props.title}</h1>
                             <h1 className="why-us-heading2">
-                                From short day trips to long family vacations, we have the perfect
-                                car for you.
+                               {props.semiTitle}
                             </h1>
                             <p className="why-us-para">
-                                Our car rental store offers a convenient and affordable solution
-                                for your transportation needs. With a variety of vehicles to
-                                choose from and flexible rental periods, we make it easy for you
-                                to get around.From short day trips to long family vacations, we
-                                have the perfect car for you.
+                                {props.para}
                             </p>
                         </div>
 
                         <div className="right-section-of-why-us">
                             <article className="why-choose-us-article">
                                 <div className="why-choose-us-icon">
-                                   <AiFillCar/>
+                                   {/* <AiFillCar/> */}
+                                   {props.icon1}
                                 </div>
                                 <div className="why-us-text-container">
                                     <h1 className="right-section-of-why-us-heading">
-                                        Wide range of vehicles
+                                        {props.point1}
                                     </h1>
                                     <p className="right-section-of-why-us-para">
-                                        We offer a wide selection of well-maintained vehicles to meet
-                                        the diverse needs of our customers, from small economy cars to
-                                        luxurious SUVs.
+                                        {props.point1para}
                                     </p>
                                 </div>
                             </article>
 
                             <article className="why-choose-us-article">
                                 <div className="why-choose-us-icon">
-                                    <FaPiggyBank/>
+                                {props.icon2}
                                 </div>
                                 <div className="why-us-text-container">
                                     <h1 className="right-section-of-why-us-heading">
-                                        Competitive pricing
+                                    {props.point2}
                                     </h1>
                                     <p className="right-section-of-why-us-para">
-                                        Our pricing is highly competitive, ensuring that you get the
-                                        best value for your money.
+                                    {props.point2para}
+                                        
                                     </p>
                                 </div>
 
@@ -159,16 +153,15 @@ export default function WhyUs() {
 
                             <article className="why-choose-us-article">
                                 <div className="why-choose-us-icon">
-                                   <FaThumbsUp/>
+                                {props.icon3}
                                 </div>
                                 <div className="why-us-text-container">
                                     <h1 className="right-section-of-why-us-heading">
-                                        Exceptional service
+                                    {props.point3}
                                     </h1>
                                     <p className="right-section-of-why-us-para">
-                                        Our friendly and knowledgeable staff is always ready to assist
-                                        you in making the right ice and providing any necessary
-                                        support during your rental period.
+                                    {props.point3para}
+                                        
                                     </p>
                                 </div>
                             </article>
