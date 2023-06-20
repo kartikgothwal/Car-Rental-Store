@@ -1,12 +1,18 @@
 import React from "react";
 import aboutHomeImg from "../images/About section images/aboutHome.jpg";
 import styled from "styled-components";
+import { GlobalStyle } from "../styles/GlobalStyle";
 const AboutHome = () => {
   const AboutHomeSection = styled.section`
-    /* border: 2px solid; */
-    height: 41rem;
+    border: 2px solid;
+    height: 60rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     .AboutHomeSection-container {
+      position: relative !important;
+      right: 0;
+      top: -8rem;
       height: 41rem;
       width: 100%;
       /* border: 2px solid; */
@@ -15,13 +21,10 @@ const AboutHome = () => {
       background-repeat: no-repeat;
       background-size: cover;
       height: 35rem;
-      position: relative;
       width: 100%;
-      top: -10rem;
       z-index: -10;
-      /* border: 2px solid red; */
-      /* opacity: 0.2; */
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -36,31 +39,52 @@ const AboutHome = () => {
     .AboutHomeSection-container-main-content-heading {
       z-index: 1;
       opacity: 1;
-      border: 2px solid black;
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    .lmfpEo,
+    .AboutHomeSection-container-main-content-heading span {
+      color: var(--btn-background-color);
+    }
+    .AboutHomeSection-container p {
+      display: block;
+      text-transform: capitalize;
+      z-index: 1;
+      opacity: 1;
+      font-size: 2rem;
     }
     .AboutHomeSection-container-hero {
-      border: 2px solid;
-      position: relative;
-      z-index: 100;
+      border: 2px solid black;
+      height: 20rem;
     }
   `;
 
   return (
     <>
+      <GlobalStyle />
       <AboutHomeSection className="AboutHomeSection">
         <div className="AboutHomeSection-container">
           <div className="homeAboutImage"></div>
           <h1 className="AboutHomeSection-container-main-content-heading">
-            Fueled by Passion
+            FUELED BY <span>PASSION.</span>
           </h1>
-          <div className="AboutHomeSection-container-hero">
-            <div className="AboutHomeSection-container-main-content">
-              {/* <h1 className="AboutHomeSection-container-main-content-heading">
-                Fueled by Passion
-              </h1> */}
+          <br />
+          <p>reliable, convenient & valued </p>
+        </div>
+        <section className="AboutHomeSection-container-hero">
+          <div className="AboutHomeSection-container-main-content">
+            <h1 ></h1>
+            <div className="AboutHomeSection-container-main-content-hero">
+              
+              <div className="AboutHomeSection-container-main-content-hero-first">
+                
+              </div>
+              <div className="AboutHomeSection-container-main-content-hero-second">
+
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </AboutHomeSection>
     </>
   );
