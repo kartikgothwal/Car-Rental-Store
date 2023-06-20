@@ -2,10 +2,13 @@ import React from "react";
 import aboutHomeImg from "../images/About section images/aboutHome.jpg";
 import styled from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
+import WhyUs from "../HomePageComponents/WhyUs";
+import { AiFillCar } from "react-icons/ai";
+import { FaPiggyBank, FaThumbsUp } from "react-icons/fa";
 const AboutHome = () => {
   const AboutHomeSection = styled.section`
     border: 2px solid;
-    height: 60rem;
+    height: 100rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -73,15 +76,32 @@ const AboutHome = () => {
         </div>
         <section className="AboutHomeSection-container-hero">
           <div className="AboutHomeSection-container-main-content">
-            <h1 ></h1>
+            <h1></h1>
             <div className="AboutHomeSection-container-main-content-hero">
-              
-              <div className="AboutHomeSection-container-main-content-hero-first">
-                
-              </div>
-              <div className="AboutHomeSection-container-main-content-hero-second">
-
-              </div>
+              <WhyUs
+                title={"Why Choose Us"}
+                semiTitle={
+                  "From short day trips to long family vacations, we have the perfect car for you."
+                }
+                para={
+                  "Our car rental store offers a convenient and affordable solution for your transportation needs. With a variety of vehicles to choose from and flexible rental periods, we make it easy for you to get around.From short day trips to long family vacations, we have the perfect car for you."
+                }
+                icon1={<AiFillCar />}
+                icon2={<FaPiggyBank />}
+                icon3={<FaThumbsUp />}
+                point1={"Wide range of vehicles"}
+                point2={"Competitive pricing"}
+                point3={"Exceptional service"}
+                point1para={
+                  "We offer a wide selection of well-maintained vehicles to meet the diverse needs of our customers, from small economy cars to luxurious SUVs."
+                }
+                point2para={
+                  "Our pricing is highly competitive, ensuring that you get the best value for your money."
+                }
+                point3para={
+                  "Our friendly and knowledgeable staff is always ready to assist you in making the right ice and providing any necessary support during your rental period."
+                }
+              />
             </div>
           </div>
         </section>
