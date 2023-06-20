@@ -3,11 +3,12 @@ import aboutHomeImg from "../images/About section images/aboutHome.jpg";
 import styled from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import WhyUs from "../HomePageComponents/WhyUs";
-import { AiFillCar } from "react-icons/ai";
-import { FaPiggyBank, FaThumbsUp } from "react-icons/fa";
+import { GrUserExpert, GrStatusGood, GrUpgrade } from "react-icons/gr";
+ 
+ 
 const AboutHome = () => {
   const AboutHomeSection = styled.section`
-    border: 2px solid;
+    /* border: 2px solid; */
     height: 100rem;
     width: 100%;
     display: flex;
@@ -16,14 +17,14 @@ const AboutHome = () => {
       position: relative !important;
       right: 0;
       top: -8rem;
-      height: 41rem;
+      height: 31rem;
       width: 100%;
       /* border: 2px solid; */
       background-image: url(${aboutHomeImg});
       background-position: 50% center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 35rem;
+    
       width: 100%;
       z-index: -10;
       display: flex;
@@ -57,8 +58,11 @@ const AboutHome = () => {
       font-size: 2rem;
     }
     .AboutHomeSection-container-hero {
-      border: 2px solid black;
-      height: 20rem;
+      /* border: 2px solid black; */
+      height: 38rem;
+      position: relative;
+    top: -5rem;
+ 
     }
   `;
 
@@ -76,30 +80,26 @@ const AboutHome = () => {
         </div>
         <section className="AboutHomeSection-container-hero">
           <div className="AboutHomeSection-container-main-content">
-            <h1></h1>
+           
             <div className="AboutHomeSection-container-main-content-hero">
               <WhyUs
-                title={"Why Choose Us"}
+                title={"Our Story"}
                 semiTitle={
-                  "From short day trips to long family vacations, we have the perfect car for you."
+                  "Drive Beyond Limits, Unleash Your Epic Automotive Adventures!"
                 }
-                para={
-                  "Our car rental store offers a convenient and affordable solution for your transportation needs. With a variety of vehicles to choose from and flexible rental periods, we make it easy for you to get around.From short day trips to long family vacations, we have the perfect car for you."
-                }
-                icon1={<AiFillCar />}
-                icon2={<FaPiggyBank />}
-                icon3={<FaThumbsUp />}
-                point1={"Wide range of vehicles"}
-                point2={"Competitive pricing"}
-                point3={"Exceptional service"}
-                point1para={
-                  "We offer a wide selection of well-maintained vehicles to meet the diverse needs of our customers, from small economy cars to luxurious SUVs."
-                }
+                para={`In a bustling city, "Wheels on the Go" car rental store provided seamless journeys. With a diverse fleet and passionate team, they catered to wanderlust souls and adventure enthusiasts. From family getaways to business ventures, their well-maintained vehicles became reliable companions, carrying dreams and cherished memories.`}
+                icon1={<GrUserExpert />}
+                icon2={<GrUpgrade />}
+                icon3={<GrStatusGood />}
+                point1={"3 years of rental experience"}
+                point2={"Continuously upgrading our fleet"}
+                point3={"Audience segmentation "}
+                point1para={`With over three years of rental experience. Trust us to deliver reliable vehicles, exceptional service, and unforgettable memories`}
                 point2para={
-                  "Our pricing is highly competitive, ensuring that you get the best value for your money."
+                  "Continuously upgrading our fleet for latest models and ensure a comfortable and stylish ride."
                 }
                 point3para={
-                  "Our friendly and knowledgeable staff is always ready to assist you in making the right ice and providing any necessary support during your rental period."
+                  "Utilizing audience segmentation to tailor our services and deliver personalized experiences that exceed expectations."
                 }
               />
             </div>

@@ -34,6 +34,11 @@ export default function WhyUs(props) {
   gap: 1rem;
   font-family: 'Poppins', sans-serif;
 }
+.why-us-heading{
+
+  font-size: 25px;
+  color:var(--btn-background-color)
+}
 
 .why-us-heading2 {
   font-size: 2rem;
@@ -90,6 +95,7 @@ export default function WhyUs(props) {
 
 .right-section-of-why-us-heading {
   font-family: Poppins, sans-serif;
+  font-size: 20px;
 }
 
 .right-section-of-why-us-para {
