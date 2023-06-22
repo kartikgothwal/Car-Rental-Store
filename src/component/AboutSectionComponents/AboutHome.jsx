@@ -4,12 +4,12 @@ import styled from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import WhyUs from "../HomePageComponents/WhyUs";
 import { GrUserExpert, GrStatusGood, GrUpgrade } from "react-icons/gr";
- 
- 
+import TimeLine from "./TimeLine";
+
 const AboutHome = () => {
   const AboutHomeSection = styled.section`
     /* border: 2px solid; */
-    height: 100rem;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,6 @@ const AboutHome = () => {
       background-position: 50% center;
       background-repeat: no-repeat;
       background-size: cover;
-    
       width: 100%;
       z-index: -10;
       display: flex;
@@ -61,8 +60,15 @@ const AboutHome = () => {
       /* border: 2px solid black; */
       height: 38rem;
       position: relative;
-    top: -5rem;
- 
+      top: -5rem;
+    }
+    .why-us-heading {
+      font-size: 40px;
+      color: var(--btn-background-color);
+    }
+
+    .why-us-heading2 {
+      font-size: 2rem;
     }
   `;
 
@@ -80,7 +86,6 @@ const AboutHome = () => {
         </div>
         <section className="AboutHomeSection-container-hero">
           <div className="AboutHomeSection-container-main-content">
-           
             <div className="AboutHomeSection-container-main-content-hero">
               <WhyUs
                 title={"Our Story"}
@@ -105,6 +110,7 @@ const AboutHome = () => {
             </div>
           </div>
         </section>
+        <TimeLine />
       </AboutHomeSection>
     </>
   );

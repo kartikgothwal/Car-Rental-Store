@@ -1,11 +1,11 @@
-import React from 'react'
-import { GlobalStyle } from '../styles/GlobalStyle'
-import styled from 'styled-components'
-import {AiFillCar} from 'react-icons/ai'
-import {FaPiggyBank, FaThumbsUp} from 'react-icons/fa'
- 
+import React from "react";
+import { GlobalStyle } from "../styles/GlobalStyle";
+import styled from "styled-components";
+import { AiFillCar } from "react-icons/ai";
+import { FaPiggyBank, FaThumbsUp } from "react-icons/fa";
+
 export default function WhyUs(props) {
-    const Wrapper = styled.section`
+  const Wrapper = styled.section`
     
 .why-us-header {
   height: 42rem;
@@ -34,10 +34,9 @@ export default function WhyUs(props) {
   gap: 1rem;
   font-family: 'Poppins', sans-serif;
 }
-.why-us-heading{
-
+.why-us-heading {
   font-size: 25px;
-  color:var(--btn-background-color)
+  color: var(--btn-background-color);
 }
 
 .why-us-heading2 {
@@ -108,76 +107,65 @@ export default function WhyUs(props) {
 
     `;
 
-    return (
-        <>
-            <GlobalStyle />
-            <Wrapper className="why-us-section">
-                <div className="why-us-header">
-                    <div className="why-us-container">
+  return (
+    <>
+      <GlobalStyle />
+      <Wrapper className="why-us-section">
+        <div className="why-us-header">
+          <div className="why-us-container">
+            <div className="left-section-of-why-us">
+              <h1 className="why-us-heading">{props.title}</h1>
+              <h1 className="why-us-heading2">{props.semiTitle}</h1>
+              <p className="why-us-para">{props.para}</p>
+            </div>
 
-                        <div className="left-section-of-why-us">
-                            <h1 className="why-us-heading">{props.title}</h1>
-                            <h1 className="why-us-heading2">
-                               {props.semiTitle}
-                            </h1>
-                            <p className="why-us-para">
-                                {props.para}
-                            </p>
-                        </div>
-
-                        <div className="right-section-of-why-us">
-                            <article className="why-choose-us-article">
-                                <div className="why-choose-us-icon">
-                                   {/* <AiFillCar/> */}
-                                   {props.icon1}
-                                </div>
-                                <div className="why-us-text-container">
-                                    <h1 className="right-section-of-why-us-heading">
-                                        {props.point1}
-                                    </h1>
-                                    <p className="right-section-of-why-us-para">
-                                        {props.point1para}
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article className="why-choose-us-article">
-                                <div className="why-choose-us-icon">
-                                {props.icon2}
-                                </div>
-                                <div className="why-us-text-container">
-                                    <h1 className="right-section-of-why-us-heading">
-                                    {props.point2}
-                                    </h1>
-                                    <p className="right-section-of-why-us-para">
-                                    {props.point2para}
-                                        
-                                    </p>
-                                </div>
-
-                            </article>
-
-                            <article className="why-choose-us-article">
-                                <div className="why-choose-us-icon">
-                                {props.icon3}
-                                </div>
-                                <div className="why-us-text-container">
-                                    <h1 className="right-section-of-why-us-heading">
-                                    {props.point3}
-                                    </h1>
-                                    <p className="right-section-of-why-us-para">
-                                    {props.point3para}
-                                        
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-
-                    </div>
-
+            <div className="right-section-of-why-us">
+              <article className="why-choose-us-article">
+                <div className="why-choose-us-icon">
+                  {/* <AiFillCar/> */}
+                  {props.icon1}
                 </div>
-            </Wrapper>
+                <div className="why-us-text-container">
+                  <h1 className="right-section-of-why-us-heading">
+                    {props.point1}
+                  </h1>
+                  <p className="right-section-of-why-us-para">
+                    {props.point1para}
+                  </p>
+                </div>
+              </article>
 
-        </>
-    )
+              <article className="why-choose-us-article">
+                <div className="why-choose-us-icon">{props.icon2}</div>
+                <div className="why-us-text-container">
+                  <h1 className="right-section-of-why-us-heading">
+                    {props.point2}
+                  </h1>
+                  <p className="right-section-of-why-us-para">
+                    {props.point2para}
+                  </p>
+                </div>
+              </article>
+
+              <article className="why-choose-us-article">
+                <div className="why-choose-us-icon">{props.icon3}</div>
+                <div className="why-us-text-container">
+                  <h1 className="right-section-of-why-us-heading">
+                    {props.point3}
+                  </h1>
+                  <p className="right-section-of-why-us-para">
+                    {props.point3para}
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+    </>
+  );
 }
+WhyUs.defaultProps = {
+  headingFirstHeight: "25px",
+  headingSecondHeight: "2rem",
+};
