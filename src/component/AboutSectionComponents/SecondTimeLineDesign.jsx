@@ -1,99 +1,116 @@
 import React from "react";
 import styled from "styled-components";
-import FirstImg from "../images/About section images/Timeline/second-2.png";
+import hero1 from "../images/About section images/Timeline/hero-1.webp";
+import hero2 from "../images/About section images/Timeline/hero-2.jpg";
+import hero3 from "../images/About section images/Timeline/hero-3.jpg";
+import hero4 from "../images/About section images/Timeline/hero-4.jpg";
+
 const SecondTimeLineDesign = () => {
   const SecondTimeLineDesignSection = styled.section`
-    /* border: 2px solid; */
     height: 100%;
     width: 100%;
+    /* border: 2px solid; */
     padding: 10px;
     .second-timeline {
-      /* border: 2px solid; */
       height: 100%;
       width: 100%;
+      /* border: 2px solid; */
+      padding: 10px;
+      font-family: Poppins, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .second-timeline-container {
+      box-shadow: 0 1px 3px rgba(23, 23, 23, 0.24);
       display: flex;
       flex-direction: column;
-    }
-    .second-timeline-container-first {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      width: 19rem;
       height: 100%;
-      /* padding: 10px; */
-      font-family: poppins, sans-serif;
-    }
-    .second-timeline-container-first-content-first {
+      padding: 10px;
+      font-size: 25px;
+      text-align: center;
       /* border: 2px solid; */
-      padding: 10px 20px;
-      width: 100%;
-      height: 100%;
     }
-    .second-timeline-container-first-content-first h1 {
-      font-size: 2rem;
+    .second-timeline-container img {
+      /* border: 2px solid; */
+      max-height: 15rem !important;
+      max-width: 17rem !important;
     }
-    .second-timeline-container-first-content-first h2 {
-      font-size: 20px;
-      margin:15px 0px;
-
-      text-transform: uppercase;
+    .second-timeline-container h1 {
+     
+       
     }
-    .second-timeline-container-first-content-first p {
+    .second-timeline-first-container-sub {
+      height: 50%;
+      padding: 20px 10px;
+      /* border: 2px solid; */
+    }
+    .second-timeline-container p {
+      color: var(--text-color);
       font-family: Rubik, sans-serif;
       font-size: 17px;
       line-height: 22px;
       font-weight: 300;
-      text-align: left;
-      margin: 0.8rem 0px;
-      color: var(--text-color);
+      text-align: center;
+      padding: 10px;
     }
-    .second-timeline-container-first-content-second {
-      height: 100%;
-    width: 100%;
-      /* border: 2px solid; */
-    }
-
-    .second-timeline-container-first-content-second img {
-      height: 27rem;
-    width: 43rem;
-}
- 
-    .second-timeline-container-second {
-      /* border: 2px solid; */
-      padding: 10px 25px;
-      font-family: "Poppins";
-    }
-    .second-timeline-container-second-content-first {
-    }
-    .second-timeline-container-second-content-second h1 {
-      text-transform: uppercase;
+    .extra-bg {
+      background-color: var(--black-color);
+      color: var(--white-color);
     }
   `;
 
   return (
     <SecondTimeLineDesignSection>
       <div className="second-timeline">
-        <div className="second-timeline-container-first">
-          <div className="second-timeline-container-first-content-first">
-            <h2>The Little Steps</h2>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+        <div className="second-timeline-container  ">
+          <img src={hero1} alt="" />
+          <div className="second-timeline-first-container-sub extra-bg">
+            <h1>Lorem, ipsum.</h1>
             <p>
-              Lorem lorum. Deserunt modi quibusdam, rerum quae incidunt,
-              excepturi ducimus, assumenda quidem consectetur voluptate
-              provident.
-              Lorem lorum. Deserunt modi quibusdam, rerum quae incidunt,
-              excepturi ducimus, assumenda quidem consectetur voluptate
-              provident.
-              Lorem lorum. Deserunt modi quibusdam, rerum quae incidunt,
-              excepturi ducimus, assumenda quidem consectetur voluptate
-              provident.
-              Lorem lorum. Deserunt modi quibusdam, rerum quae incidunt,
-              excepturi ducimus, assumenda quidem consectetur voluptate
-              provident.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              necessitatibus accusamus officiis provident eaque sunt alias illum
+              vel iu
             </p>
           </div>
-          <div className="second-timeline-container-first-content-second">
-            <img src={FirstImg} alt="" />
+        </div>
+        <div className="second-timeline-container ">
+          <div className="second-timeline-first-container-sub">
+            <h1>Lorem, ipsum.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              necessitatibus accusamus officiis provident eaque sunt alias illum
+            </p>
           </div>
+          <img src={hero2} alt="" />
+        </div>
+        <div className="second-timeline-container ">
+          <img src={hero3} alt="" />
+          <div className="second-timeline-first-container-sub extra-bg">
+            <h1>Lorem, ipsum.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              necessitatibus accusamus officiis provident eaque sunt alias illum
+             
+            </p>
+          </div>
+        </div>
+        <div className="second-timeline-container  ">
+          <div className="second-timeline-first-container-sub">
+            <h1>Lorem, ipsum.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              necessitatibus accusamus officiis provident eaque sunt alias illum
+              ve
+            </p>
+          </div>
+          <img src={hero4} alt="" />
         </div>
       </div>
     </SecondTimeLineDesignSection>

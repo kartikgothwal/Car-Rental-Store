@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
- import FirstTimeLineDesign from "./FirstTimeLineDesign";
+import FirstTimeLineDesign from "./FirstTimeLineDesign";
 import SecondTimeLineDesign from "./SecondTimeLineDesign";
 import ThirdTimeLineDesign from "./ThirdTimeLineDesign";
 const TimeLine = () => {
@@ -100,6 +100,10 @@ const TimeLine = () => {
     }
   `;
 
+  const Handleclick =()=>{
+    
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -119,21 +123,20 @@ const TimeLine = () => {
             <div className="timeline-path-content-hero">
               <div className="timeline-path-content-hero-content">
                 {/* <FirstTimeLineDesign /> */}
-                {/* <SecondTimeLineDesign /> */}
+                {/* <SecondTimeLineDesign />  */}
                 <ThirdTimeLineDesign />
-               
               </div>
               <div className="timeline-path-content-hero-content-decider">
                 <article className="timeline-path-content-hero-content-decider-btn">
-                  <button></button>
+                  <button onClick={Handleclick}></button>
                   <span></span>
-                  <button></button>
+                  <button onClick={Handleclick}></button>
                   <span></span>
-                  <button></button>
+                  <button onClick={Handleclick}></button>
                   <span></span>
-                  <button></button>
+                  <button onClick={Handleclick}></button>
                   <span></span>
-                  <button></button>
+                  <button onClick={Handleclick}></button>
                 </article>
               </div>
             </div>
