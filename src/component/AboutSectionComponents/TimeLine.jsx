@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import FirstTimeLineDesign from "./FirstTimeLineDesign";
@@ -51,7 +51,6 @@ const TimeLine = () => {
     .timeline-path-content {
       width: 100%;
       height: 40rem;
-
       padding: 0px 20px;
     }
     .timeline-path-content-hero {
@@ -94,15 +93,34 @@ const TimeLine = () => {
     .timeline-path-content-hero-content-decider-btn span {
       height: 22px;
       width: 10rem;
-      border-top: 2px solid black;
+      border-top: 6.5px solid black;
       position: relative;
       top: 10px;
     }
   `;
+  const [ClickedBtn, SetClickedBtn] = useState(2);
+  const Button = useRef([]);
+  const Parent = useRef();
 
-  const Handleclick =()=>{
-    
-  }
+  useEffect(() => {
+    Handleclick(ClickedBtn);
+  });
+  const Handleclick = (ButtonClicked) => {
+    const parent = Parent.current.childNodes;
+    for (let i = 0; i <= ButtonClicked; i++) {
+      if (i % 2 === 0) {
+        console.log(parent[i]);
+      
+
+      } else {
+        console.log(parent[i]);
+  
+      }
+    }
+  };
+  const updateRef = (BtnID) => (ref) => {
+    Button.current[BtnID] = ref;
+  };
 
   return (
     <>
@@ -127,16 +145,28 @@ const TimeLine = () => {
                 <ThirdTimeLineDesign />
               </div>
               <div className="timeline-path-content-hero-content-decider">
-                <article className="timeline-path-content-hero-content-decider-btn">
-                  <button onClick={Handleclick}></button>
+                <article
+                  ref={Parent}
+                  className="timeline-path-content-hero-content-decider-btn"
+                >
+                  <button
+                    ref={updateRef(0)}
+                    onClick={() => Handleclick(1)}
+                  ></button>
                   <span></span>
-                  <button onClick={Handleclick}></button>
+                  <button
+                    ref={updateRef(1)}
+                    onClick={() => Handleclick(2)}
+                  ></button>
                   <span></span>
-                  <button onClick={Handleclick}></button>
+                  <button
+                    ref={updateRef(2)}
+                    onClick={() => Handleclick(3)}
+                  ></button>
                   <span></span>
-                  <button onClick={Handleclick}></button>
+                  <button></button>
                   <span></span>
-                  <button onClick={Handleclick}></button>
+                  <button></button>
                 </article>
               </div>
             </div>
