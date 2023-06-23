@@ -28,12 +28,15 @@ export default function Testimonial() {
       text-align: center;
       font-size: 1.65rem;
       text-transform: capitalize;
+      font-family:"Poppins",sans-serif;
+
     }
     .testimonial-home-sub-heading {
       font-size: 2.5rem;
       letter-spacing: 1px;
       text-transform: capitalize;
       text-align: center;
+      font-family:"Poppins",sans-serif;
     }
     .testimonial-home-heading-para {
       color: var(--text-color);

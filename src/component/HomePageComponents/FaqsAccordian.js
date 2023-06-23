@@ -22,8 +22,10 @@ export default function FaqsAccordian(props) {
       text-align: center;
       font-size: 1.65rem;
       text-transform: capitalize;
+      font-family: Poppins,"san-serif";
     }
     .faq-Page-Sub-Heading {
+      font-family: Poppins,"san-serif";
       font-size: 2.5rem;
       letter-spacing: 1px;
       text-transform: capitalize;
