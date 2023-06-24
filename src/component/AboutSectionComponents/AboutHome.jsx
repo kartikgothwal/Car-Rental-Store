@@ -5,6 +5,7 @@ import { GlobalStyle } from "../styles/GlobalStyle";
 import WhyUs from "../HomePageComponents/WhyUs";
 import { GrUserExpert, GrStatusGood, GrUpgrade } from "react-icons/gr";
 import TimeLine from "./TimeLine";
+import Details from "./Details";
 
 const AboutHome = () => {
   const AboutHomeSection = styled.section`
@@ -111,6 +112,7 @@ const AboutHome = () => {
           </div>
         </section>
         <TimeLine />
+        <Details />
       </AboutHomeSection>
     </>
   );

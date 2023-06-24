@@ -7,12 +7,12 @@ import ThirdTimeLineDesign from "./ThirdTimeLineDesign";
 const TimeLine = () => {
   const TimeLineSection = styled.section`
     /* border: 2px solid; */
-    height: 78rem;
+    height: 63rem;
     width: 100% !important;
     padding: 0px 20px;
     background-color: var(--page-background-color);
     .timeline-container {
-      height: 75rem;
+      height: 62rem;
       width: 100% !important;
       /* border: 2px solid; */
     }
@@ -71,6 +71,9 @@ const TimeLine = () => {
       /* border: 2px solid; */
       height: 11rem;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     .timeline-path-content-hero-content-decider-btn {
       /* border: 2px solid; */
@@ -97,14 +100,24 @@ const TimeLine = () => {
       position: relative;
       top: 10px;
     }
+    .timeline-path-content-hero-content-decider-years {
+      display: flex;
+      /* border: 2px solid; */
+      font-size: 23px;
+      width: 53rem;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      gap: 9rem;
+    }
   `;
   const [clickedBtn, SetClickedBtn] = useState(4);
 
   const Button = useRef([]);
   const ParentNode = useRef();
-  useEffect(()=>{
-    Handleclick(clickedBtn)
-  },[clickedBtn])
+  useEffect(() => {
+    Handleclick(clickedBtn);
+  }, [clickedBtn]);
 
   const Handleclick = (value) => {
     const ParentChilderns = ParentNode.current.childNodes;
@@ -129,7 +142,6 @@ const TimeLine = () => {
     Button.current[BtnID] = ref;
   };
 
-
   return (
     <>
       <GlobalStyle />
@@ -138,7 +150,7 @@ const TimeLine = () => {
           <div className="timeline-container-content">
             <h1 className="timeline-container-content-heading">Our Timeline</h1>
             <h1 className="timeline-container-content-sub-heading">
-              In the Bussiness since 2020
+              In the Bussiness since 2021
             </h1>
             <p>
               Discover a range of fantastic vehicles to rent for your upcoming
@@ -153,6 +165,13 @@ const TimeLine = () => {
                 {clickedBtn === 4 && <ThirdTimeLineDesign />}
               </div>
               <div className="timeline-path-content-hero-content-decider">
+                <article className="timeline-path-content-hero-content-decider-years">
+                  <h1>2021</h1>
+                  <h1>2022</h1>
+                  <h1>2023</h1>
+                  <h1>2024</h1>
+                  <h1>2025</h1>
+                </article>
                 <article
                   ref={ParentNode}
                   className="timeline-path-content-hero-content-decider-btn"
