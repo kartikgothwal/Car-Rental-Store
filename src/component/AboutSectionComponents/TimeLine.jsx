@@ -98,29 +98,37 @@ const TimeLine = () => {
       top: 10px;
     }
   `;
-  const [clickedBtn,SetClickedBtn]=useState(4);
-  
+  const [clickedBtn, SetClickedBtn] = useState(4);
+
   const Button = useRef([]);
   const ParentNode = useRef();
-  useEffect(() => {
-    Handleclick(2);
-  });
+  useEffect(()=>{
+    Handleclick(clickedBtn)
+  },[clickedBtn])
+
   const Handleclick = (value) => {
     const ParentChilderns = ParentNode.current.childNodes;
+
     let i = 0;
-    do {
-      if (i % 2 === 0) {
-        ParentChilderns[i].style.backgroundColor = "blue";
-      } else {
-        ParentChilderns[i].style.borderTop = "blue";
-      }
-    } while (i < value);
-    ParentChilderns[value].style.backgroundColor = "blue";
-    SetClickedBtn(value)
+    if (value === 1) {
+      ParentChilderns[i].style.backgroundColor = " blue";
+    } else {
+      do {
+        if (i % 2 === 0) {
+          ParentChilderns[i].style.backgroundColor = " blue";
+        } else {
+          ParentChilderns[i].style.borderTop = "6.5px solid blue";
+        }
+        i++;
+      } while (i < value);
+      ParentChilderns[value].style.backgroundColor = "blue";
+    }
+    SetClickedBtn(value);
   };
   const updateRef = (BtnID) => (ref) => {
     Button.current[BtnID] = ref;
   };
+
 
   return (
     <>
@@ -140,10 +148,9 @@ const TimeLine = () => {
           <div className="timeline-path-content">
             <div className="timeline-path-content-hero">
               <div className="timeline-path-content-hero-content">
-                 {clickedBtn===1 && <FirstTimeLineDesign />}
-                 {clickedBtn===2 && <SecondTimeLineDesign />}
-                 {clickedBtn===4 && <ThirdTimeLineDesign />}
-                
+                {clickedBtn === 1 && <FirstTimeLineDesign />}
+                {clickedBtn === 2 && <SecondTimeLineDesign />}
+                {clickedBtn === 4 && <ThirdTimeLineDesign />}
               </div>
               <div className="timeline-path-content-hero-content-decider">
                 <article
@@ -154,19 +161,27 @@ const TimeLine = () => {
                     ref={updateRef(0)}
                     onClick={() => Handleclick(1)}
                   ></button>
+
                   <span></span>
+
                   <button
                     ref={updateRef(1)}
                     onClick={() => Handleclick(2)}
                   ></button>
+
                   <span></span>
+
                   <button
                     ref={updateRef(2)}
                     onClick={() => Handleclick(4)}
                   ></button>
+
                   <span></span>
+
                   <button></button>
+
                   <span></span>
+
                   <button></button>
                 </article>
               </div>

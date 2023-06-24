@@ -8,6 +8,7 @@ const FirstTimeLineDesign = () => {
     padding: 10px 25px;
     font-family: "poppins", "sans-serif";
 
+
     .first-design-section {
       width: 100%;
       height: 100%;
