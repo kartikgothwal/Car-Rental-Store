@@ -98,25 +98,25 @@ const TimeLine = () => {
       top: 10px;
     }
   `;
-  const [ClickedBtn, SetClickedBtn] = useState(2);
-  const Button = useRef([]);
-  const Parent = useRef();
-
-  useEffect(() => {
-    Handleclick(ClickedBtn);
-  });
-  const Handleclick = (ButtonClicked) => {
-    const parent = Parent.current.childNodes;
-    for (let i = 0; i <= ButtonClicked; i++) {
-      if (i % 2 === 0) {
-        console.log(parent[i]);
-      
-
-      } else {
-        console.log(parent[i]);
+  const [clickedBtn,SetClickedBtn]=useState(4);
   
+  const Button = useRef([]);
+  const ParentNode = useRef();
+  useEffect(() => {
+    Handleclick(2);
+  });
+  const Handleclick = (value) => {
+    const ParentChilderns = ParentNode.current.childNodes;
+    let i = 0;
+    do {
+      if (i % 2 === 0) {
+        ParentChilderns[i].style.backgroundColor = "blue";
+      } else {
+        ParentChilderns[i].style.borderTop = "blue";
       }
-    }
+    } while (i < value);
+    ParentChilderns[value].style.backgroundColor = "blue";
+    SetClickedBtn(value)
   };
   const updateRef = (BtnID) => (ref) => {
     Button.current[BtnID] = ref;
@@ -140,13 +140,14 @@ const TimeLine = () => {
           <div className="timeline-path-content">
             <div className="timeline-path-content-hero">
               <div className="timeline-path-content-hero-content">
-                {/* <FirstTimeLineDesign /> */}
-                {/* <SecondTimeLineDesign />  */}
-                <ThirdTimeLineDesign />
+                 {clickedBtn===1 && <FirstTimeLineDesign />}
+                 {clickedBtn===2 && <SecondTimeLineDesign />}
+                 {clickedBtn===4 && <ThirdTimeLineDesign />}
+                
               </div>
               <div className="timeline-path-content-hero-content-decider">
                 <article
-                  ref={Parent}
+                  ref={ParentNode}
                   className="timeline-path-content-hero-content-decider-btn"
                 >
                   <button
@@ -161,7 +162,7 @@ const TimeLine = () => {
                   <span></span>
                   <button
                     ref={updateRef(2)}
-                    onClick={() => Handleclick(3)}
+                    onClick={() => Handleclick(4)}
                   ></button>
                   <span></span>
                   <button></button>
