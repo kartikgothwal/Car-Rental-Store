@@ -6,6 +6,7 @@ import WhyUs from "../HomePageComponents/WhyUs";
 import { GrUserExpert, GrStatusGood, GrUpgrade } from "react-icons/gr";
 import TimeLine from "./TimeLine";
 import Details from "./Details";
+import PhotoGallery from "./PhotoGallery";
 
 const AboutHome = () => {
   const AboutHomeSection = styled.section`
@@ -112,6 +113,7 @@ const AboutHome = () => {
           </div>
         </section>
         <TimeLine />
+        <PhotoGallery />
         <Details />
       </AboutHomeSection>
     </>
