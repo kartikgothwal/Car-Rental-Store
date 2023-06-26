@@ -7,39 +7,29 @@ const PhotoGallery = () => {
     border: 2px solid black;
     height: 40rem;
     width: 100%;
-    overflow: hidden;
-
+    /* overflow: hidden; */
+    
     .photo-container {
-      padding: 30px 0;
-      display: grid;
+      height: 100vh;
       width: 100vw;
-      height: 100%;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      display: grid;
+      grid-template-columns: 300px 350px 400px;
+      grid-template-rows: 400px 250px 350px;
+      grid-auto-rows:  400px 250px 350px;
+      grid-auto-columns:  300px 350px 400px;
       column-gap: 10px;
-      row-gap: 10px;
-      animation: name duration timing-function delay iteration-count direction
-        fill-mode;
-      animation: img_slider 5s ease linear infinite;
+      grid-gap: 10px;
     }
-    @keyframes img_slider {
-      100% {
-        transform: translateX(-2660px);
-      }
-    }
+
     .photo-container > div {
-      width: 100%;
-      height: 100%;
+      display: grid;
     }
     .photo-container > div > img {
-      width: 300px;
-      height: 200px;
+      /* width: 400px;
+      height: 300px; */
       object-fit: cover;
     }
-    .item {
-      grid-row-start:1;
-      grid-row-end:2;
-
+    .photo-container > div:nth-child(1) {
     }
   `;
 
@@ -49,7 +39,7 @@ const PhotoGallery = () => {
         <div className="photo-container">
           {PhotosOne.map((images, index) => {
             return (
-              <div className={images.class}>
+              <div className="pics">
                 <img src={images.photo} alt={`Photo${index}`} />
               </div>
             );

@@ -59,11 +59,11 @@ const AboutHome = () => {
       font-size: 2rem;
     }
     .AboutHomeSection-container-hero {
-      /* border: 2px solid black; */
       height: 38rem;
       position: relative;
       top: -5rem;
     }
+
     .why-us-heading {
       font-size: 40px;
       color: var(--btn-background-color);
@@ -114,7 +114,7 @@ const AboutHome = () => {
         </section>
         <TimeLine />
         <PhotoGallery />
-        <Details />
+        {/* <Details /> */}
       </AboutHomeSection>
     </>
   );
