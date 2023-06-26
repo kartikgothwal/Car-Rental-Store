@@ -2,16 +2,11 @@ import React from "react";
 import aboutHomeImg from "../images/About section images/aboutHome.jpg";
 import styled from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
-import WhyUs from "../HomePageComponents/WhyUs";
-import { GrUserExpert, GrStatusGood, GrUpgrade } from "react-icons/gr";
-import TimeLine from "./TimeLine";
-import Details from "./Details";
-import PhotoGallery from "./PhotoGallery";
 
-const AboutHome = () => {
+const  AboutHome = (props) => {
   const AboutHomeSection = styled.section`
+    height: 30rem;
     /* border: 2px solid; */
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -22,7 +17,7 @@ const AboutHome = () => {
       height: 31rem;
       width: 100%;
       /* border: 2px solid; */
-      background-image: url(${aboutHomeImg});
+      background-image: url(${props.img});
       background-position: 50% center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -45,7 +40,7 @@ const AboutHome = () => {
       z-index: 1;
       opacity: 1;
       font-size: 2rem;
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
     .lmfpEo,
     .AboutHomeSection-container-main-content-heading span {
@@ -58,20 +53,6 @@ const AboutHome = () => {
       opacity: 1;
       font-size: 2rem;
     }
-    .AboutHomeSection-container-hero {
-      height: 38rem;
-      position: relative;
-      top: -5rem;
-    }
-
-    .why-us-heading {
-      font-size: 40px;
-      color: var(--btn-background-color);
-    }
-
-    .why-us-heading2 {
-      font-size: 2rem;
-    }
   `;
 
   return (
@@ -81,40 +62,11 @@ const AboutHome = () => {
         <div className="AboutHomeSection-container">
           <div className="homeAboutImage"></div>
           <h1 className="AboutHomeSection-container-main-content-heading">
-            FUELED BY <span>PASSION.</span>
+            {props.headingText} <span>{props.spanText}</span>
           </h1>
           <br />
-          <p>reliable, convenient & valued </p>
+          <p>{props.Subheading} </p>
         </div>
-        <section className="AboutHomeSection-container-hero">
-          <div className="AboutHomeSection-container-main-content">
-            <div className="AboutHomeSection-container-main-content-hero">
-              <WhyUs
-                title={"Our Story"}
-                semiTitle={
-                  "Drive Beyond Limits, Unleash Your Epic Automotive Adventures!"
-                }
-                para={`In a bustling city, "Wheels on the Go" car rental store provided seamless journeys. With a diverse fleet and passionate team, they catered to wanderlust souls and adventure enthusiasts. From family getaways to business ventures, their well-maintained vehicles became reliable companions, carrying dreams and cherished memories.`}
-                icon1={<GrUserExpert />}
-                icon2={<GrUpgrade />}
-                icon3={<GrStatusGood />}
-                point1={"3 years of rental experience"}
-                point2={"Continuously upgrading our fleet"}
-                point3={"Audience segmentation "}
-                point1para={`With over three years of rental experience. Trust us to deliver reliable vehicles, exceptional service, and unforgettable memories`}
-                point2para={
-                  "Continuously upgrading our fleet for latest models and ensure a comfortable and stylish ride."
-                }
-                point3para={
-                  "Utilizing audience segmentation to tailor our services and deliver personalized experiences that exceed expectations."
-                }
-              />
-            </div>
-          </div>
-        </section>
-        <TimeLine />
-        <PhotoGallery />
-        {/* <Details /> */}
       </AboutHomeSection>
     </>
   );

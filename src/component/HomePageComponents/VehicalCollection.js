@@ -203,66 +203,19 @@ export default function VehicalCollection() {
             <div className="vehical-collections">
               <div className="vehicals">
                 <div id="Vehical-table">
-                  <button
-                    className={`vehical-names ${
-                      activeButton === 0 ? "active" : ""
-                    } `}
-                    id="first-vehical"
-                    ref={updateRef(0)}
-                    onClick={() => handleClick(0)}
-                  >
-                    Corvette
-                  </button>
-                  <button
-                    className={`vehical-names ${
-                      activeButton === 1 ? "active" : ""
-                    } `}
-                    id="second-vehical"
-                    ref={updateRef(1)}
-                    onClick={() => handleClick(1)}
-                  >
-                    Toyota Supra
-                  </button>
-                  <button
-                    className={`vehical-names ${
-                      activeButton === 2 ? "active" : ""
-                    } `}
-                    id="third-vehical"
-                    onClick={() => handleClick(2)}
-                    ref={updateRef(2)}
-                  >
-                    Mustang GT
-                  </button>
-                  <button
-                    className={`vehical-names ${
-                      activeButton === 3 ? "active" : ""
-                    } `}
-                    id="fourth-vehical"
-                    onClick={() => handleClick(3)}
-                    ref={updateRef(3)}
-                  >
-                    Hyundai
-                  </button>
-                  <button
-                    className={`vehical-names ${
-                      activeButton === 4 ? "active" : ""
-                    } `}
-                    id="fifth-vehical"
-                    onClick={() => handleClick(4)}
-                    ref={updateRef(4)}
-                  >
-                    Jeep Wrangler
-                  </button>
-                  <button
-                    className={`vehical-names ${
-                      activeButton === 5 ? "active" : ""
-                    } `}
-                    id="sixth-vehical"
-                    onClick={() => handleClick(5)}
-                    ref={updateRef(5)}
-                  >
-                    Land Rover
-                  </button>
+                  {Details.map((VehicalDetails, index) => {
+                    return (
+                      <button
+                        className={`vehical-names ${
+                          activeButton === index ? "active" : ""
+                        } `}
+                        ref={updateRef(index)}
+                        onClick={() => handleClick(index)}
+                      >
+                        {VehicalDetails.Model}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
               <div className="vehicals-images">

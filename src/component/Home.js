@@ -19,7 +19,7 @@ export default function App() {
       {/* <Navbar/>    */}
       <HomeSection />
       <Service />
-      <Booking />
+      <Booking vaild={false} />
       <WhyUs
         title={"Why Choose Us"}
         semiTitle={

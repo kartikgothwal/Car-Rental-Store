@@ -2,7 +2,7 @@ import React from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import styled from "styled-components";
 import { ImSearch } from "react-icons/im";
-export default function Booking() {
+export default function Booking(props) {
   const Wrapper = styled.section`
     /* border: 2px solid; */
     display: flex;
@@ -99,13 +99,19 @@ export default function Booking() {
     #booking-btn i {
       margin-left: 8px;
     }
+    /* .booking {
+      position: relative;
+      top: -20px;
+      border:2px solid;
+
+    } */
   `;
 
   return (
     <>
       <GlobalStyle />
 
-      <Wrapper className="booking-section">
+      <Wrapper className={`booking-section ${props.vaild ? "booking" : " "}`}>
         <div className="booking-header">
           <div className="booking-container">
             <h1 className="booking-heading">Book a car</h1>
