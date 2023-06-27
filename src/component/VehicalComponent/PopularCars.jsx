@@ -151,6 +151,12 @@ const PopularCars = () => {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      font-family: "poppins", "sans serif";
+    }
+    .hero-car-money span{
+        font-family: rubik, "sans serif";
+    font-weight: 100;
+
     }
   `;
 
@@ -203,50 +209,13 @@ const PopularCars = () => {
                   <span>200mph</span>
                 </div>
               </div>
-              <div className="hero-car-details">
-                <CurrencyRupeeOutlinedIcon />
-                <h1>4000/day</h1>
+              <div className="hero-car-money">
+                <CurrencyRupeeOutlinedIcon style={{fontWeight: "bold"}} />
+                <h1>4000/ <span>day</span></h1>
               </div>
             </div>
           </div>
 
-          <div className="car-models-collection-container-hero">
-            <div className="car-models-collection-header">
-              <figure className="car-models-collection-header-figure-hero">
-                <img src={LamborginiLogo} alt="logo" />
-                <div className="car-models-collection-header-headings">
-                  <h1>Chevy Corvette</h1>
-                  <p>Turbo S 2021</p>
-                </div>
-              </figure>
-              <div className="car-models-collection-header-units">
-                <p>2 units available</p>
-              </div>
-            </div>
-            <div className="car-models-collection-body">
-              <img src={CarImageDemo} alt="car-image" />
-            </div>
-            <div className="car-models-collection-footer">
-              <div className="hero-car-details-first">
-                <div className="hero-car-details">
-                  <PersonIcon />
-                  <span>2</span>
-                </div>
-                <div className="hero-car-details">
-                  <MinorCrashOutlinedIcon />
-                  <span>Manual</span>
-                </div>
-                <div className="hero-car-details">
-                  <LocalGasStationOutlinedIcon />
-                  <span>200mph</span>
-                </div>
-              </div>
-              <div className="hero-car-details">
-                <CurrencyRupeeOutlinedIcon />
-                <h1>4000/day</h1>
-              </div>
-            </div>
-          </div>
           
           <div className="car-models-collection-container-hero">
             <div className="car-models-collection-header">
@@ -279,12 +248,53 @@ const PopularCars = () => {
                   <span>200mph</span>
                 </div>
               </div>
-              <div className="hero-car-details">
-                <CurrencyRupeeOutlinedIcon />
-                <h1>4000/day</h1>
+              <div className="hero-car-money">
+                <CurrencyRupeeOutlinedIcon style={{fontWeight: "bold"}} />
+                <h1>4000/ <span>day</span></h1>
               </div>
             </div>
           </div>
+
+          
+          <div className="car-models-collection-container-hero">
+            <div className="car-models-collection-header">
+              <figure className="car-models-collection-header-figure-hero">
+                <img src={LamborginiLogo} alt="logo" />
+                <div className="car-models-collection-header-headings">
+                  <h1>Chevy Corvette</h1>
+                  <p>Turbo S 2021</p>
+                </div>
+              </figure>
+              <div className="car-models-collection-header-units">
+                <p>2 units available</p>
+              </div>
+            </div>
+            <div className="car-models-collection-body">
+              <img src={CarImageDemo} alt="car-image" />
+            </div>
+            <div className="car-models-collection-footer">
+              <div className="hero-car-details-first">
+                <div className="hero-car-details">
+                  <PersonIcon />
+                  <span>2</span>
+                </div>
+                <div className="hero-car-details">
+                  <MinorCrashOutlinedIcon />
+                  <span>Manual</span>
+                </div>
+                <div className="hero-car-details">
+                  <LocalGasStationOutlinedIcon />
+                  <span>200mph</span>
+                </div>
+              </div>
+              <div className="hero-car-money">
+                <CurrencyRupeeOutlinedIcon style={{fontWeight: "bold"}} />
+                <h1>4000/ <span>day</span></h1>
+              </div>
+            </div>
+          </div>
+
+          
 
 
         </div>
