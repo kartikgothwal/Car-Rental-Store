@@ -14,6 +14,7 @@ const Details = [
     Speed: "1.99s",
     Charges: "3999",
     Available: "Mumbai",
+    drive:"Manual",
     image: CorvetteImage,
     ModelName:"Chevy Corvette Z06",
   },
@@ -25,6 +26,7 @@ const Details = [
     Speed: "1.69s",
     Charges: "4599",
     Available: "Indore",
+    drive:"Automatic",
     image: ToyotaSupraImage,
     ModelName: "Toyota GR Supra A91", 
   },
@@ -36,6 +38,7 @@ const Details = [
     Speed: "2.99s",
     Charges: "7499",
     Available: "Mumbai",
+    drive:"Manual",
     image: MustangImage,
     ModelName: "Mustang GT 1969", 
   },
@@ -47,7 +50,9 @@ const Details = [
     Speed: "5.99s",
     Charges: "5599",
     Available: "Chandigarh",
+    drive:"Manual",
     image: Hyundai,
+    ModelName: "Hyundai Aura SX", 
   },
   {
     Model: "Jeep Wrangler Rubicon",
@@ -57,19 +62,22 @@ const Details = [
     Speed: "5.99s",
     Charges: "7999",
     Available: "Delhi",
+    drive:"Automatic",
     image: WranglerImage,
+    ModelName: "Jeep Wrangler JL Rubicon", 
   },
 
   {
-    Model: "Jeep Wrangler Rubicon",
-  
+    Model: "Range Rover Evoque",
     Mileage: "220mph",
     Weight: "280lbs",
     Color: "White",
     Speed: "2.59s",
     Charges: "5999",
     Available: "Indore",
+    drive:"Manual",
     image: RoverImage,
+    Model: "Land Rover Range Rover Evoque",
   },
 ];
 export default Details;
