@@ -226,9 +226,28 @@ const PopularCars = () => {
             <div className="car-models-collection-body">
               <img src={CarImageDemo} alt="car-image" />
             </div>
-            <div className="car-models-collection-footer"></div>
+            <div className="car-models-collection-footer">
+              <div className="hero-car-details-first">
+                <div className="hero-car-details">
+                  <PersonIcon />
+                  <span>2</span>
+                </div>
+                <div className="hero-car-details">
+                  <MinorCrashOutlinedIcon />
+                  <span>Manual</span>
+                </div>
+                <div className="hero-car-details">
+                  <LocalGasStationOutlinedIcon />
+                  <span>200mph</span>
+                </div>
+              </div>
+              <div className="hero-car-details">
+                <CurrencyRupeeOutlinedIcon />
+                <h1>4000/day</h1>
+              </div>
+            </div>
           </div>
-
+          
           <div className="car-models-collection-container-hero">
             <div className="car-models-collection-header">
               <figure className="car-models-collection-header-figure-hero">
@@ -246,17 +265,28 @@ const PopularCars = () => {
               <img src={CarImageDemo} alt="car-image" />
             </div>
             <div className="car-models-collection-footer">
-              <div className="hero-car-details">
-                <PersonIcon />
+              <div className="hero-car-details-first">
+                <div className="hero-car-details">
+                  <PersonIcon />
+                  <span>2</span>
+                </div>
+                <div className="hero-car-details">
+                  <MinorCrashOutlinedIcon />
+                  <span>Manual</span>
+                </div>
+                <div className="hero-car-details">
+                  <LocalGasStationOutlinedIcon />
+                  <span>200mph</span>
+                </div>
               </div>
               <div className="hero-car-details">
-                <MinorCrashOutlinedIcon />
-              </div>
-              <div className="hero-car-money ">
-                <LocalGasStationOutlinedIcon />
+                <CurrencyRupeeOutlinedIcon />
+                <h1>4000/day</h1>
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </PopularCarssection>
