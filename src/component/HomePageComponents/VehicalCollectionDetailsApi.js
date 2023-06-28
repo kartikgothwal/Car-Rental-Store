@@ -77,7 +77,7 @@ const Details = [
     Available: "Indore",
     drive:"Manual",
     image: RoverImage,
-    Model: "Land Rover Range Rover Evoque",
+    ModelName: "Land Rover Range Rover Evoque",
   },
 ];
 export default Details;

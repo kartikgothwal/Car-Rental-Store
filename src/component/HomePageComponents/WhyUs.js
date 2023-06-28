@@ -1,111 +1,107 @@
 import React from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import styled from "styled-components";
-import { AiFillCar } from "react-icons/ai";
-import { FaPiggyBank, FaThumbsUp } from "react-icons/fa";
 
 export default function WhyUs(props) {
   const Wrapper = styled.section`
-    
-.why-us-header {
-  height: 42rem;
-  padding: 1rem 5rem;
-}
+    .why-us-header {
+      height: 42rem;
+      padding: 1rem 5rem;
+    }
 
-.why-us-container {
-  display: flex;
-  /* align-items: center; */
-  flex-direction: row;
-  gap: 4rem;
-  /* border: 2px solid; */
-  height: 34rem;
-}
+    .why-us-container {
+      display: flex;
+      /* align-items: center; */
+      flex-direction: row;
+      gap: 4rem;
+      /* border: 2px solid; */
+      height: 34rem;
+    }
 
-.left-section-of-why-us,
-.right-section-of-why-us {
-  padding: 2rem 4rem;
-}
+    .left-section-of-why-us,
+    .right-section-of-why-us {
+      padding: 2rem 4rem;
+    }
 
-.left-section-of-why-us {
-  position: relative;
-  top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-family: 'Poppins', sans-serif;
-}
-.why-us-heading {
-  font-size: 25px;
-  color: var(--btn-background-color);
-}
+    .left-section-of-why-us {
+      position: relative;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-family: "Poppins", sans-serif;
+    }
+    .why-us-heading {
+      font-size: 25px;
+      color: var(--btn-background-color);
+    }
 
-.why-us-heading2 {
-  font-size: 2rem;
-}
+    .why-us-heading2 {
+      font-size: 2rem;
+    }
 
-.why-us-para {
-  color: var(--text-color);
-  font-family: Rubik, sans-serif;
-  font-size: 17px;
-  line-height: 22px;
-  font-weight: 300;
-  text-align: left;
-  margin: 2rem 0;
-}
+    .why-us-para {
+      color: var(--text-color);
+      font-family: Rubik, sans-serif;
+      font-size: 17px;
+      line-height: 22px;
+      font-weight: 300;
+      text-align: left;
+      margin: 2rem 0;
+    }
 
-.right-section-of-why-us {
-  display: flex;
-  gap: 2rem;
-  /* border: 2px solid; */
-  flex-direction: column;
-  padding: 0;
-  width: 5rem;
-  width: 120rem;
-}
+    .right-section-of-why-us {
+      display: flex;
+      gap: 2rem;
+      /* border: 2px solid; */
+      flex-direction: column;
+      padding: 0;
+      width: 5rem;
+      width: 120rem;
+    }
 
-.why-choose-us-article {
-  display: flex;
-  flex-direction: row;
-  /* border: 2px solid; */
-  align-items: center;
-  height: 10rem;
-  gap: 2rem;
-}
+    .why-choose-us-article {
+      display: flex;
+      flex-direction: row;
+      /* border: 2px solid; */
+      align-items: center;
+      height: 10rem;
+      gap: 2rem;
+    }
 
-.why-choose-us-icon {
-  margin: 29px 0;
-  font-size: 3rem;
-  color: var(--btn-background-color);
-  padding: 1.45rem 1.6rem;
-  border-radius: 4rem;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  background-color: #f3e5e5;
-}
+    .why-choose-us-icon {
+      margin: 29px 0;
+      font-size: 3rem;
+      color: var(--btn-background-color);
+      padding: 1.45rem 1.6rem;
+      border-radius: 4rem;
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      background-color: #f3e5e5;
+    }
 
-.right-section-of-why-us article:nth-child(2) {
-  border-radius: 50% 70% 60% 40% / 60% 30% 70% 40%;
-}
+    .right-section-of-why-us article:nth-child(2) {
+      border-radius: 50% 70% 60% 40% / 60% 30% 70% 40%;
+    }
 
-.why-us-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+    .why-us-text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-.right-section-of-why-us-heading {
-  font-family: Poppins, sans-serif;
-  font-size: 20px;
-}
+    .right-section-of-why-us-heading {
+      font-family: Poppins, sans-serif;
+      font-size: 20px;
+    }
 
-.right-section-of-why-us-para {
-  color: var(--text-color);
-  font-family: Rubik, sans-serif;
-  padding-right: 20px;
-  font-size: 17px;
-  line-height: 22px;
-}
-
-    `;
+    .right-section-of-why-us-para {
+      color: var(--text-color);
+      font-family: Rubik, sans-serif;
+      padding-right: 20px;
+      font-size: 17px;
+      line-height: 22px;
+    }
+  `;
 
   return (
     <>

@@ -4,8 +4,12 @@ import AboutHome from "./AboutSectionComponents/AboutHome";
 import Booking from "./HomePageComponents/Booking";
 import HomeImg from "./images/About section images/aboutHome2.jpg";
 import styled from "styled-components";
-import VehicalCollection from './HomePageComponents/VehicalCollectionDetailsApi'
-import CarCollection from "./VehicalComponent/CarCollection";
+import VehicalCollection from "./HomePageComponents/VehicalCollectionDetailsApi";
+// import CarCollection from "./VehicalComponent/CarCollection";
+import CarFleet from "../component/VehicalComponent/CarsFleet";
+import PopularCars from "./VehicalComponent/PopularCars";
+import Footer from "./Footer";
+
 export default function VehicalModels() {
   const Heading1 = styled.h1`
     padding: 0px 20px 40px 54px;
@@ -23,9 +27,13 @@ export default function VehicalModels() {
         spanText={"Dreams."}
         Subheading={"The Car Collection of Your Dreams"}
       />
+
       <Heading1>Drive the Car of your dreams</Heading1>
       <Booking vaild={true} />
-      <CarCollection />
+      {/* <CarCollection /> */}
+      <PopularCars />
+      <CarFleet />
+      <Footer />
     </>
   );
 }
