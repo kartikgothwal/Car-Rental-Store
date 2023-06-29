@@ -54,7 +54,7 @@ export default function About() {
         </div>
       </WhyUssection>
       <TimeLine />
-      {/* <PhotoGallery /> */}
+      <PhotoGallery />
       <Details />
       <Footer />
     </>

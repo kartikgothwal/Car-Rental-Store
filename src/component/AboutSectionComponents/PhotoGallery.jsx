@@ -4,32 +4,68 @@ import { PhotosOne } from "./PhotoGalleryApi";
 
 const PhotoGallery = () => {
   const PhotoGallerySection = styled.section`
-    border: 2px solid black;
-    height: 40rem;
+    /* border: 2px solid black; */
+    height: 44rem;
     width: 100%;
-    /* overflow: hidden; */
-    
-    .photo-container {
-      height: 100vh;
-      width: 100vw;
-      display: grid;
-      grid-template-columns: 300px 350px 400px;
-      grid-template-rows: 400px 250px 350px;
-      grid-auto-rows:  400px 250px 350px;
-      grid-auto-columns:  300px 350px 400px;
-      column-gap: 10px;
-      grid-gap: 10px;
-    }
 
-    .photo-container > div {
+    padding: 20px 5px;
+    overflow: hidden;
+    .photo-container {
+      height: 44rem;
+      width: 100%;
       display: grid;
+      grid-template-columns: repeat(11, 150px);
+      grid-template-rows: repeat(3, 220px);
+      /* grid-auto-rows: 200px 200px 200px; */
+      grid-auto-columns: 200px 200px 200px;
+      grid-gap: 10px;
+      animation-name: slider;
+      animation-duration: 250s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
-    .photo-container > div > img {
-      /* width: 400px;
-      height: 300px; */
+    @keyframes slider {
+      from {
+        transform: translateX(0px);
+      }
+      to {
+        transform: translateX(-2499px);
+      }
+    }
+    .h-stretch {
+      grid-row: span 2;
+    }
+    .w-stretch {
+      grid-column: span 2;
+    }
+    /* .pics:nth-child(2) {
+      grid-column: 2/4;
+    }
+    .pics:nth-child(3) {
+      grid-column: 4/6;
+    }
+    .pics:nth-child(4) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .pics:nth-child(4) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .pics:nth-child(5) {
+      grid-column: span 2;
+    }
+    .pics:nth-child(6) {
+      grid-column: span 2;
+    grid-row: span 2;
+    }
+    .pics:nth-child(7) {
+      grid-column: span 3;
+    } */
+    .pics img {
+      height: 100%;
+      width: 100%;
       object-fit: cover;
-    }
-    .photo-container > div:nth-child(1) {
     }
   `;
 
@@ -39,7 +75,7 @@ const PhotoGallery = () => {
         <div className="photo-container">
           {PhotosOne.map((images, index) => {
             return (
-              <div className="pics">
+              <div className={`pics ${images.class}`}>
                 <img src={images.photo} alt={`Photo${index}`} />
               </div>
             );

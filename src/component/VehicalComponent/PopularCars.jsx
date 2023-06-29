@@ -35,7 +35,7 @@ const PopularCars = () => {
       display: flex;
       align-items: center;
       font-size: 18px;
-      font-family: sans-serif;
+      font-family: Rubik ;
       font-weight: bold;
       color: blue;
     }

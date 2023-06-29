@@ -6,6 +6,7 @@ const Details = () => {
     /* border:2px solid ; */
     height: 30rem;
     width: 100%;
+    margin-top: 10px;
     background-color: var(--black-color) !important;
     color: var(--white-color) !important;
     padding: 30px 20px;
