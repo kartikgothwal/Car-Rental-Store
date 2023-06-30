@@ -9,7 +9,7 @@ import VehicalCollection from "./HomePageComponents/VehicalCollectionDetailsApi"
 import CarFleet from "../component/VehicalComponent/CarsFleet";
 import PopularCars from "./VehicalComponent/PopularCars";
 import Footer from "./Footer";
-
+import { BannerBand } from "../component/HomePageComponents/Banner";
 export default function VehicalModels() {
   const Heading1 = styled.h1`
     padding: 0px 20px 40px 54px;
@@ -18,7 +18,9 @@ export default function VehicalModels() {
     position: relative;
     top: -20px;
   `;
-
+  const BannerBandContainer = styled.figure`
+    padding: 0rem 4rem 3rem 4rem;
+  `;
   return (
     <>
       <AboutHome
@@ -28,8 +30,11 @@ export default function VehicalModels() {
         Subheading={"The Car Collection of Your Dreams"}
       />
 
-      <Heading1>Drive the Car of your dreams</Heading1>
+      <Heading1> Drive the Car of your dreams ꔮ</Heading1>
       <Booking vaild={true} />
+      <BannerBandContainer>
+        <BannerBand />
+      </BannerBandContainer>
       {/* <CarCollection /> */}
       <PopularCars />
       <CarFleet />

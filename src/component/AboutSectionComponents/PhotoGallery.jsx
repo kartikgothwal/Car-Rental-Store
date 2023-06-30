@@ -7,7 +7,6 @@ const PhotoGallery = () => {
     /* border: 2px solid black; */
     height: 44rem;
     width: 100%;
-
     padding: 20px 5px;
     overflow: hidden;
     .photo-container {
@@ -38,30 +37,7 @@ const PhotoGallery = () => {
     .w-stretch {
       grid-column: span 2;
     }
-    /* .pics:nth-child(2) {
-      grid-column: 2/4;
-    }
-    .pics:nth-child(3) {
-      grid-column: 4/6;
-    }
-    .pics:nth-child(4) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    .pics:nth-child(4) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    .pics:nth-child(5) {
-      grid-column: span 2;
-    }
-    .pics:nth-child(6) {
-      grid-column: span 2;
-    grid-row: span 2;
-    }
-    .pics:nth-child(7) {
-      grid-column: span 3;
-    } */
+
     .pics img {
       height: 100%;
       width: 100%;

@@ -17,6 +17,52 @@ import download from "../images//Download-app/download-img-2.png";
 import googlePlay from "../images/Download-app/google play.png";
 import appStore from "../images/Download-app/app store.png";
 
+export const BannerBand = () => {
+  const BannerContent = styled.div`
+    height: 6rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #2b2323;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+    .bannerImg img {
+      height: 50px;
+      width: 53px;
+    }
+  `;
+
+  return (
+    <>
+      <BannerContent className="banner-content">
+        <div className="bannerImg">
+          <img src={LexusImage} alt="This is an image" />
+        </div>
+        <div className="bannerImg">
+          <img src={MahindraImage} alt="This is an image" />
+        </div>
+        <div className="bannerImg">
+          <img src={MercedesImage} alt="This is an image" />
+        </div>
+        <div className="bannerImg">
+          <img src={lamboImage} alt="This is an image" />
+        </div>
+        <div className="bannerImg">
+          <img src={PorcheImage} alt="This is an image" />
+        </div>
+        <div className="bannerImg">
+          <img src={ScionImage} alt="This is an image" />
+        </div>
+        <div className="bannerImg">
+          <img src={VolkswagenImage} alt="This is an image" />
+        </div>
+      </BannerContent>
+    </>
+  );
+};
+
 export default function Banner() {
   const Banner = styled.section`
     height: 133rem;
@@ -32,21 +78,7 @@ export default function Banner() {
       /* border: 2px solid; */
       padding: 0rem 4rem 2rem 4rem;
     }
-    .banner-content {
-      /* border: 2px solid; */
-      height: 6rem;
-      width: 100%;
-      border-radius: 20px;
-      background-color: #2b2323;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      color: white;
-    }
-    .banner-content img {
-      height: 50px;
-      width: 53px;
-    }
+    /* border: 2px solid; */
 
     .group-banner-img {
       width: 100%;
@@ -57,7 +89,7 @@ export default function Banner() {
       background-color: var(--page-background-color);
       height: 54rem;
       padding: 7rem 0 0 0;
-         /* border: 2px solid; */
+      /* border: 2px solid; */
     }
     .download-container {
       height: 47rem;
@@ -128,29 +160,7 @@ export default function Banner() {
       <GlobalStyle />
       <Banner className="banner">
         <div className="banner-container">
-          <div className="banner-content">
-            <div className="first-banner">
-              <img src={LexusImage} alt="This is an image" />
-            </div>
-            <div className="second-banner">
-              <img src={MahindraImage} alt="This is an image" />
-            </div>
-            <div className="third-banner">
-              <img src={MercedesImage} alt="This is an image" />
-            </div>
-            <div className="fouth-banner">
-              <img src={lamboImage} alt="This is an image" />
-            </div>
-            <div className="fifth-banner">
-              <img src={PorcheImage} alt="This is an image" />
-            </div>
-            <div className="sixth-banner">
-              <img src={ScionImage} alt="This is an image" />
-            </div>
-            <div className="sixth-banner">
-              <img src={VolkswagenImage} alt="This is an image" />
-            </div>
-          </div>
+          <BannerBand />
           <div>
             <img
               className="group-banner-img"
@@ -193,9 +203,8 @@ export default function Banner() {
             height="450"
             style={{ border: "0" }}
             allowFullScreen
-           
             loading="lazy"
-            referrerPolicy="..."  
+            referrerPolicy="..."
           ></iframe>
         </section>
       </Banner>
